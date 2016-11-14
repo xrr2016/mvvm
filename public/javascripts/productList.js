@@ -17,11 +17,12 @@ window.onload = function() {
         })
     })
     let timer = setInterval(function() {
-        let index = Math.round(Math.random() * control.length - 1)
+        let index = Math.floor(Math.random() * control.length)
         for (let i = 0; i < control.length; i++) {
             control[i].className = ''
             images[i].childNodes[0].style.opacity = '0'
         }
+        console.log(index)
         control[index].className += 'active'
         images[index].childNodes[0].style.opacity = '1'
     }, 2000)
