@@ -2,75 +2,183 @@ html, body {
     width: 100%;
     height: 100%;
     margin: 0;
-    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-    background-color: rgba(0, 0, 0, 0.5);
+    /*font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;*/
+    font: 14px Microsoft Yahei;
+}
+a{
+  text-decoration: none;
+  color: #f4f4f4;
+}
+.fa {
+    color: #f4f4f4;
+}
+.clearfix{
+  overflow: auto;
+  zoom:1;
 }
 .container{
+  position: relative;
   width: 100%;
+  margin: 0;
+  padding: 0;
 }
+
+/*导航栏*/
 .navbar {
-    width:60%;
+    position: absolute;
     margin: 0 0 0 40%;
     padding-top: 1em;
     list-style: none;
-    z-index: 10;
     font-size: 16px;
+    z-index: 100;
 }
 
 .navbar li {
     display: inline-block;
-    height: 40px;
     margin: 0 1em;
 }
 
 .navbar li a {
     display: block;
-    height: 40px;
-    line-height: 40px;
-    padding: 0.5em 0.8em;
+    line-height: 100%;
+    padding: 0.8em 1.2em;
     text-decoration: none;
+    font-weight: normal;
+    font-size: 14px;
     color: #f4f4f4;
-    border: 1px solid transparent;
-}
-.navbar li:hover a {
-  border: 1px solid orange;
+    border: 2px solid transparent;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
 }
 
-#search {
+.navbar li:hover a {
+    border: 2px solid orange;
+}
+
+#language {
+    border: 2px solid transparent;
+}
+
+
+/*主页面*/
+/*index-banner*/
+.index-banner{
     position: relative;
-    font-size: 2em;
-    padding:0;
-    display: inline-block;
-    width: 0.4em;
-    height: 0.4em;
-    border: 0.1em solid #f4f4f4;
-    border-radius: 0.35em;
-    margin-left: 1em;
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    height: 78em;
+    width: 100%;
+    background: url('/images/banner.png');
+    background-size: 100%;
 }
-#search::before {
-    content: "";
-    display: inline-block;
+
+.mask {
     position: absolute;
-    right: -0.25em;
-    bottom: -0.1em;
-    border-width: 0;
-    background: #f4f4f4;
-    width: 0.35em;
-    height: 0.08em;
-    -webkit-transform: rotate(45deg);
-    -moz-transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
-    -o-transform: rotate(45deg);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.5);
 }
-#language{
-  border: 1px solid transparent;
+
+.slogan {
+    position: absolute;
+    top: 38em;
+    left: 18em;
+    z-index: 10;
+    color: #fff;
 }
-.angle-down {
-  display: inline-block;
-	width: 0;
-	height: 0;
-  margin-left: 1em;
-	border-left: 0.3em solid transparent;
-	border-right: 0.3em solid transparent;
-	border-top: 0.6em solid #f4f4f4;
+
+.slogan img {
+    width: 22em;
+}
+.slogan h2{
+  padding-left: 1em;
+  font-weight: normal;
+}
+
+.double-down {
+    position: absolute;
+    display: block;
+    z-index: 10;
+    bottom: 2em;
+    cursor: pointer;
+    left: 50%;
+    -webkit-animation: blink 1.5s linear infinite;
+    animation: blink 1.5s linear infinite;
+    /*transition: all .2s ease;*/
+}
+/*.double-down:hover{
+  transform: scale(1.1);
+}*/
+
+@keyframes blink {
+    0% {
+        bottom: 2.5em;
+        width: 0px;
+        opacity: 0;
+    }
+    100% {
+        bottom: 2em;
+        width: 45px;
+        opacity: 1;
+    }
+}
+/*index-about*/
+.index-about .about-left,.index-about .about-right{
+  position: relative;
+  width: 50%;
+  height: 40em;
+  float: left;
+}
+.index-about .about-left{
+  text-align: left;
+  color: #fed90b;
+}
+.about-left .left-container{
+  width: 60%;
+  margin: 10em auto 0em auto;
+  text-align: left;
+}
+.about-left p {
+  font-size: 1.2em;
+}
+.about-left .fa{
+  color: #fed90b;
+}
+.about-left .fa-quote-right{
+  text-indent: 28em;
+}
+.about-left a{
+  position: relative;
+  display: block;
+  top: 0em;
+  left: 0em;
+  margin-top: 3em;
+  width: 4em;
+  height: 1em;
+  line-height: 1em;
+  padding:1em 2em;
+  background-color: #f3d90b;
+  text-align: center;
+  color: #fff;
+  font-size: 24px;
+}
+.about-left a:before{
+  position: absolute;
+  bottom: -0.6em;
+  left: -1em;
+  content: "";
+  width: 6em;
+  height: 2em;
+  padding: 1em 2em;
+  border: 2px solid #f3d90b;
+}
+
+.index-about .about-right{
+  background: url('/images/image01.png');
+  background-size: cover;
 }
