@@ -25,7 +25,7 @@
                     <br>
                     <i class="fa fa-quote-right fa-1x" aria-hidden="true"></i>
                 </p>
-                <a href="/about" class="about-button">关于我们</a>
+                <a href="/about" class="about-button">{{navbar.about}}</a>
             </div>
         </div>
         <div class="about-right"></div>
@@ -53,21 +53,34 @@
             <p>
                 “唐图文化创意有限公司” <br> 是一家专注于企业CIS设计及创意产品设计开发的设计公司
             </p>
-            <a href="/product" class="product-button">我们的产品</a>
+            <a href="/product" class="product-button">{{navbar.product}}</a>
         </div>
     </div>
 </div>
 <!-- 我们的服务 -->
 <div class="container">
     <div class="index-service">
-      <img src="/images/service.jpg" alt="" />
-      <div class="service-left">
-        <div class="mask"></div>
-        <a href="/service" class="service-button">我们的服务</a>
-        <p>
-          价值观：CPQ（creative；professional； quality）
-          <br> 文化：share（profit；knowledge；feeling）
-        </p>
-      </div>
+        <img src="/images/service.jpg" alt="" />
+        <div class="service-left">
+            <a href="/service" class="service-button">{{navbar.service}}</a>
+            <p>
+                价值观：CPQ（creative；professional； quality）
+                <br>
+                文化：share（profit；knowledge；feeling）
+            </p>
+        </div>
     </div>
 </div>
+<!-- 营销网络 -->
+<div class="container">
+    <div class="index-marketing">
+        <img src="/images/marketing.jpg" alt="" />
+        <div class="marketing-container">
+          <a href="/marketing" class="marketing-button">{{navbar.marketing}}</a>
+          <p>
+            “唐图文化创意有限公司”
+            <br> 是一家专注于企业CIS设计及创意产品设计开发的设计公司
+          </p>
+        </div>
+    </div>
+  </div>
