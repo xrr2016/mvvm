@@ -31,6 +31,16 @@ ul {
     padding: 0;
 }
 
+.mask {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
 
 /*导航栏*/
 
@@ -81,16 +91,6 @@ ul {
     margin: 0;
     padding: 0;
     width: 100%;
-}
-
-.mask {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
-    background-color: rgba(0, 0, 0, 0.5);
 }
 
 .banner {
@@ -177,7 +177,7 @@ ul {
     text-indent: 28em;
 }
 
-.about-button,.product-button {
+.about-button, .product-button, .service-button {
     position: relative;
     display: block;
     top: 0em;
@@ -190,6 +190,7 @@ ul {
     text-align: center;
     font-size: 18px;
     font-weight: bold;
+    z-index: 10;
 }
 
 .about-button:before {
@@ -204,7 +205,7 @@ ul {
 }
 
 .index-about .about-right {
-    background: url('/images/image01.png');
+    background: url('/images/about.png');
     background-size: cover;
 }
 
@@ -291,17 +292,19 @@ ul {
 }
 
 .product-right p {
-  width: 100%;
-  text-align: center;
-  margin: 18em auto 4em auto;
-  text-indent: 14em;
+    width: 100%;
+    text-align: center;
+    margin: 18em auto 4em auto;
+    text-indent: 14em;
 }
-.product-button{
-  margin: 4em auto auto auto;
-  -webkit-transform: translate(4em,1em); 
-  transform: translate(4em,1em);
-  background-color: #00a381;
+
+.product-button {
+    margin: 4em auto auto auto;
+    -webkit-transform: translate(4em, 1em);
+    transform: translate(4em, 1em);
+    background-color: #00a381;
 }
+
 .product-button:before {
     position: absolute;
     bottom: -0.5em;
@@ -311,4 +314,46 @@ ul {
     height: 4em;
     padding: 1em 2em;
     border: 2px solid #00a381;
+}
+
+
+/*index-service*/
+
+.index-service {
+}
+.service-left .mask{
+  background-color: rgba(255, 255 , 255, 0.4);
+}
+.service-left {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 45%;
+    height: 100%;
+}
+.service-left p{
+  width: 60%;
+  margin: 1em auto;
+  color: #f8b62d;
+  font-size: 18px;
+  z-index: 10;
+}
+.service-button{
+  background-color: #f8b62d;
+  margin: 20em auto 4em auto;
+  -webkit-transform: translate(-8em,0em);
+  transform: translate(-8em,0em);
+}
+.service-button:before{
+  position: absolute;
+  bottom: -0.6em;
+  left: -1em;
+  content: "";
+  width: 12em;
+  height: 4.2em;
+  padding: 1em 2em;
+  border: 2px solid #F8B62D;
+}
+.index-service img {
+    width: 100%;
 }
