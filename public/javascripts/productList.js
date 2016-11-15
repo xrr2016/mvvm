@@ -22,7 +22,6 @@ window.onload = function() {
             control[i].className = ''
             images[i].childNodes[0].style.opacity = '0'
         }
-        console.log(index)
         control[index].className += 'active'
         images[index].childNodes[0].style.opacity = '1'
     }, 2000)
