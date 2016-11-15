@@ -7,7 +7,7 @@ router.get('/', function(req, res, next) {
         title: '唐图文创',
         navbar:{
           index:'首页',
-          product:'我们的产品',
+          products:'我们的产品',
           service:'我们的服务',
           about:'关于我们',
           marketing:'营销网络',
@@ -16,13 +16,33 @@ router.get('/', function(req, res, next) {
         }
     })
 });
-router.get('/product', function(req, res, next) {})
-router.get('/service', function(req, res, next) {})
-router.get('/about', function(req, res, next) {})
-router.get('/marketing', function(req, res, next) {})
-router.get('/career', function(req, res, next) {})
-router.get('/contact', function(req, res, next) {})
-router.get('/product/:id', function(req, res, next) {
+// 产品页面
+router.get('/products', function(req, res, next) {
+  res.render('pages/products',{})
+})
+// 服务页面
+router.get('/service', function(req, res, next) {
+  res.render('pages/service',{})
+})
+// 关于我们
+router.get('/about', function(req, res, next) {
+  res.render('pages/about',{})
+})
+// 营销网络
+router.get('/marketing', function(req, res, next) {
+  res.render('pages/marketing',{})
+})
+// 职业发展
+router.get('/career', function(req, res, next) {
+  res.render('pages/career',{})
+})
+// 联系我们
+router.get('/contact', function(req, res, next) {
+  res.render('pages/contact',{})
+})
+// 产品个例
+router.get('/products/:id', function(req, res, next) {
+  let id = req.params.id
 
 })
 

@@ -53,7 +53,7 @@
             <p>
                 “唐图文化创意有限公司” <br> 是一家专注于企业CIS设计及创意产品设计开发的设计公司
             </p>
-            <a href="/product" class="product-button">{{navbar.product}}</a>
+            <a href="/product" class="product-button">{{navbar.products}}</a>
         </div>
     </div>
 </div>
@@ -65,8 +65,7 @@
             <a href="/service" class="service-button">{{navbar.service}}</a>
             <p>
                 价值观：CPQ（creative；professional； quality）
-                <br>
-                文化：share（profit；knowledge；feeling）
+                <br> 文化：share（profit；knowledge；feeling）
             </p>
         </div>
     </div>
@@ -76,11 +75,62 @@
     <div class="index-marketing">
         <img src="/images/marketing.jpg" alt="" />
         <div class="marketing-container">
-          <a href="/marketing" class="marketing-button">{{navbar.marketing}}</a>
-          <p>
-            “唐图文化创意有限公司”
-            <br> 是一家专注于企业CIS设计及创意产品设计开发的设计公司
-          </p>
+            <a href="/marketing" class="marketing-button">{{navbar.marketing}}</a>
+            <p>
+                “唐图文化创意有限公司”
+                <br> 是一家专注于企业CIS设计及创意产品设计开发的设计公司
+            </p>
         </div>
     </div>
-  </div>
+</div>
+<script type="text/javascript">
+    window.onload = function() {
+        const images = Array.from($$('.image-item')),
+            control = Array.from($$('.control-item'))
+        control.forEach(function(el) {
+            let self = el
+            el.addEventListener('click', function() {
+                clearInterval(timer)
+                control.map(function(el) {
+                    el.className = ''
+                })
+                self.className += "active"
+                let index = self.dataset.index
+                for (let i = 0; i < images.length; i++) {
+                    images[i].childNodes[0].style.opacity = '0'
+                }
+                images[index].childNodes[0].style.opacity = '1'
+            })
+        })
+        let timer = setInterval(function() {
+            let index = Math.floor(Math.random() * control.length)
+            for (let i = 0; i < control.length; i++) {
+                control[i].className = ''
+                images[i].childNodes[0].style.opacity = '0'
+            }
+            control[index].className += 'active'
+            images[index].childNodes[0].style.opacity = '1'
+        }, 2000)
+    }
+
+    function $$(el) {
+        return document.querySelectorAll(el)
+    }
+</script>
+<script type="text/javascript">
+    const down = document.getElementById('double-down')
+    let t = 1000
+    let long = 1400
+    down.addEventListener('click', function() {
+        let scrollTimer = setInterval(function() {
+            document.body.scrollTop += 100
+            document.documentElement.scrollTop += 100
+            let scroolTop = document.body.scrollTop || document.documentElement.scrollTop
+
+            console.log(scroolTop);
+            if (scroolTop === long) {
+                clearInterval(scrollTimer)
+            }
+        }, t / 10)
+    })
+</script>
