@@ -1,16 +1,176 @@
-<div class="container">
-  <div class="career">
-    
-  </div>
-  <div class="joinus">
-
-  </div>
+<img src="/images/contact/logo.png" alt="" class="logo" />
+<div class="container clearfix">
+    <div class="career">
+        <h1 class="title">职业发展</h1>
+        <p class="description">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+        </p>
+        <img src="/images/contact/contact.jpg" alt="" />
+        <div class="button-container">
+            <a href="#" class="career-button">职位信息</a>
+        </div>
+    </div>
+    <div class="joinus">
+        <h1 class="title">加入我们</h1>
+        <p class="description">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+        </p>
+        <div class="button-container">
+            <a href="#" class="joinus-button">加入我们</a>
+        </div>
+    </div>
 </div>
-<div class="container">
-  <div class="contact">
-
-  </div>
-  <div class="qrcode-container">
-
-  </div>
+<div class="container clearfix">
+    <div class="contact">
+        <h1>联络我们</h1>
+        <p class="decsription">
+            如果您有其他疑问，请联系我们：</p>
+        <ul>
+            <li>
+                <h4>电话</h4>
+                <p>0756 - 3622280</p>
+            </li>
+            <li>
+                <h4>邮箱</h4>
+                <p>tangtu@chinatangram.com</p>
+            </li>
+            <li>
+                <h4>网站</h4>
+                <p>www.chinatangram.com</p>
+            </li>
+        </ul>
+    </div>
+    <div class="qrcode-container">
+        <h1>微信公众号</h1>
+        <p>更多详情请扫一扫关注我们</p>
+        <img src="/images/contact/qrcode.png" alt="" />
+    </div>
 </div>
+<style>
+    .logo {
+        position: absolute;
+        width: 10%;
+        top: 2%;
+        left: 2%;
+    }
+
+    .navbar {
+        color: #000;
+    }
+
+    .career,
+    .joinus {
+        position: relative;
+        width: 50%;
+        float: left;
+        margin-top: 4%;
+        text-align: center;
+    }
+
+    .joinus {
+        height: 440px;
+        color: #000;
+        background-color: #f4f4f4;
+    }
+
+    .career img {
+        width: 100%;
+    }
+
+    .title {
+        position: absolute;
+        width: 100%;
+        top: 8%;
+        font-size: 40px;
+        color: #fff;
+    }
+
+    .joinus .title {
+        color: #000;
+    }
+
+    .description {
+        position: absolute;
+        width: 50%;
+        top: 34%;
+        left: 28%;
+        color: #fff;
+        text-align: center;
+    }
+
+    .joinus .description {
+        color: #000;
+    }
+
+    .button-container {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        bottom: 28%;
+        left: 50%;
+        width: 20%;
+        height: 13%;
+        margin-left: -10%;
+        border: 2px solid orange;
+    }
+
+    .career-button,
+    .joinus-button {
+        display: block;
+        width: 80%;
+        height: 80%;
+        background-color: orange;
+        font-size: 28px;
+        line-height: 150%;
+    }
+
+    .contact,
+    .qecode-container {
+        float: left;
+        text-align: center;
+        padding-top: 2%;
+    }
+
+    .contact {
+        width: 75%;
+        background-color: rgb(195, 207, 223)
+    }
+
+    .contact h1 {
+        font-size: 36px;
+        font-weight: normal;
+        margin-bottom: 1em;
+    }
+
+    .contact ul {
+        width: 80%;
+        padding: 0;
+        margin: 5% auto;
+    }
+
+    .contact li {
+        width: 32%;
+        display: inline-block;
+    }
+    .contact li:nth-of-type(2){
+      border-left: 1px solid #000;
+      border-right: 1px solid #000;
+    }
+    .qrcode-container {
+        width: 25%;
+        float: right;
+        color: orange;
+    }
+    .qrcode-container{
+      text-align: center;
+      padding-top: 1em;
+    }
+    .qrcode-container p {
+      margin: 1em auto;
+      font-size: 20px;
+    }
+    .qrcode-container img {
+        width: 50%;
+    }
+</style>

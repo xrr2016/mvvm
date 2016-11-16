@@ -15,7 +15,8 @@ const navbar = {
 //首页
 router.get('/', function(req, res, next) {
         res.render('index', {
-            navbar: navbar
+            navbar: navbar,
+            isIndex:true
         })
     })
     // 产品页面
@@ -33,7 +34,8 @@ router.get('/service', function(req, res, next) {
     // 关于我们
 router.get('/about', function(req, res, next) {
         res.render('pages/about', {
-            navbar: navbar
+            navbar: navbar,
+            isAbout:true
         })
     })
     // 营销网络

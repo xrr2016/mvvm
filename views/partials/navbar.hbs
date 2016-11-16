@@ -1,14 +1,14 @@
 <!-- 导航栏 -->
 <ul class="navbar col-md-offset-5">
-    <li><a href="/">{{ navbar.index }}</a></li>
-    <li><a href="/products">{{navbar.products}}</a></li>
-    <li><a href="/service">{{navbar.service}}</a></li>
-    <li><a href="/about">{{navbar.about}}</a></li>
-    <li><a href="/marketing">{{navbar.marketing}}</a></li>
-    <li><a href="/career">{{navbar.career}}</a></li>
-    <li><a href="/contact">{{navbar.contact}}</a></li>
-    <li><i class="fa fa-search fa-lg" aria-hidden="true" class="md-only"></i></li>
-    <li><a href="#" id="language">CN <span class="caret"></span></a></li>
+    <li><a href="/" {{#if isIndex  }} style="color:#f4f4f4;" {{/if}} {{#if isAbout }} style='color:#f4f4f4' {{/if}}>{{ navbar.index }}</a></li>
+    <li><a href="/products" {{#if isIndex  }} style="color:#f4f4f4;" {{/if}} {{#if isAbout }} style='color:#f4f4f4' {{/if}}>{{navbar.products}}</a></li>
+    <li><a href="/service" {{#if isIndex }} style="color:#f4f4f4;" {{/if}} {{#if isAbout }} style='color:#f4f4f4' {{/if}}>{{navbar.service}}</a></li>
+    <li><a href="/about" {{#if isIndex  }} style="color:#f4f4f4;" {{/if}} {{#if isAbout }} style='color:#f4f4f4' {{/if}}>{{navbar.about}}</a></li>
+    <li><a href="/marketing" {{#if isIndex  }} style="color:#f4f4f4;" {{/if}} {{#if isAbout }} style='color:#f4f4f4' {{/if}}>{{navbar.marketing}}</a></li>
+    <li><a href="/career" {{#if isIndex  }} style="color:#f4f4f4;" {{/if}} {{#if isAbout }} style='color:#f4f4f4' {{/if}}>{{navbar.career}}</a></li>
+    <li><a href="/contact" {{#if isIndex  }} style="color:#f4f4f4;" {{/if}} {{#if isAbout }} style='color:#f4f4f4' {{/if}}>{{navbar.contact}}</a></li>
+    <li><i {{#if isIndex  }} style="color:#f4f4f4;" {{/if}} class="fa fa-search fa-lg" aria-hidden="true" class="md-only"></i></li>
+    <li><a href="#" id="language" {{#if isIndex  }} style="color:#f4f4f4;" {{/if}} {{#if isAbout }} style='color:#f4f4f4' {{/if}}>CN <span class="caret"></span></a></li>
 </ul>
 <style>
     /*导航栏*/
@@ -34,7 +34,7 @@
         text-decoration: none;
         font-weight: normal;
         font-size: 14px;
-        color: #f4f4f4;
+        color: #000;
         border: 2px solid transparent;
         -webkit-transition: all 0.3s ease;
         transition: all 0.3s ease;
