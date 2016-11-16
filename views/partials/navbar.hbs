@@ -10,3 +10,41 @@
     <li><i class="fa fa-search fa-lg" aria-hidden="true" class="md-only"></i></li>
     <li><a href="#" id="language">CN <span class="caret"></span></a></li>
 </ul>
+<style>
+    /*导航栏*/
+    .navbar {
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding-top: 1em;
+        padding-left: 10em;
+        font-size: 16px;
+        z-index: 100;
+    }
+
+    .navbar li {
+        display: inline-block;
+        margin: 0 0.5em;
+    }
+
+    .navbar li a {
+        display: block;
+        line-height: 100%;
+        padding: 0.8em 1.2em;
+        text-decoration: none;
+        font-weight: normal;
+        font-size: 14px;
+        color: #f4f4f4;
+        border: 2px solid transparent;
+        -webkit-transition: all 0.3s ease;
+        transition: all 0.3s ease;
+    }
+
+    .navbar li:hover a {
+        border: 2px solid orange;
+    }
+
+    #language {
+        border: 2px solid transparent;
+    }
+</style>

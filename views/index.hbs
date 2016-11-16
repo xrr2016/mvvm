@@ -120,17 +120,17 @@
 <script type="text/javascript">
     const down = document.getElementById('double-down')
     let t = 1000
-    let long = 1400
+    let long = 1200
     down.addEventListener('click', function() {
         let scrollTimer = setInterval(function() {
-            document.body.scrollTop += 100
-            document.documentElement.scrollTop += 100
+            document.body.scrollTop += 10
+            document.documentElement.scrollTop += 10
             let scroolTop = document.body.scrollTop || document.documentElement.scrollTop
 
             console.log(scroolTop);
             if (scroolTop === long) {
                 clearInterval(scrollTimer)
             }
-        }, t / 10)
+        }, t / 1000)
     })
 </script>
