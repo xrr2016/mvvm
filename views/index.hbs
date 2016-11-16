@@ -4,11 +4,11 @@
         <div class="mask"></div>
         <img src="/images/banner.jpg" alt="" class="banner" />
         <div class="slogan">
-            <img src="/images/logo.png" alt="" class="img-responsive" />
+            <img src="/images/logo.png" alt="" class="" />
             <h3>千变万化</h3>
             <h3>永远寻找最好的一块拼图给客户</h3>
         </div>
-        <span class="fa fa-angle-double-down fa-5x double-down" id="double-down" aria-hidden="true"></span>
+        <span class="fa fa-angle-double-down fa-4x double-down" id="double-down" aria-hidden="true"></span>
     </div>
 </div>
 <!-- 关于我们 -->
@@ -28,7 +28,9 @@
                 <a href="/about" class="about-button">{{navbar.about}}</a>
             </div>
         </div>
-        <div class="about-right"></div>
+        <div class="about-right">
+          <img src="/images/about.png" alt="关于我们" />
+        </div>
     </div>
 </div>
 <!-- 我们的产品 -->
@@ -83,6 +85,333 @@
         </div>
     </div>
 </div>
+<style media="screen">
+/*index-banner*/
+
+.index-banner {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+.banner {
+    width: 100%;
+}
+
+.slogan {
+    position: absolute;
+    top: 41%;
+    left: 3%;
+    color: #fff;
+    z-index: 10;
+}
+
+.slogan img {
+    width: 34%;
+}
+
+.slogan h3 {
+    padding-left: 1em;
+    font-weight: normal;
+}
+
+.double-down {
+    position: absolute;
+    display: block;
+    z-index: 10;
+    width: 5%;
+    bottom: 14%;
+    left: 50%;
+    cursor: pointer;
+    color: #f4f4f4;
+    -webkit-animation: blink 1.5s linear infinite;
+    animation: blink 1.5s linear infinite;
+}
+
+@keyframes blink {
+    0% {
+        width: 0px;
+        opacity: 0;
+    }
+    100% {
+        width: 45px;
+        opacity: 1;
+    }
+}
+
+
+/*index-about*/
+
+.about-left,.about-right {
+    position: relative;
+    width: 50%;
+    float: left;
+}
+
+.about-left {
+    text-align: left;
+    color: #fed90b;
+}
+
+.left-container {
+    width: 60%;
+    margin: 10% auto 0 auto;
+    text-align: left;
+}
+
+.left-container p {
+    font-size: 1.3em;
+}
+
+.about-left .fa {
+    color: #fed90b;
+}
+
+.about-left .fa-quote-right {
+    text-indent: 28em;
+}
+
+.about-button,.product-button, .service-button,.marketing-button {
+    position: relative;
+    display: block;
+    margin-top: 8%;
+    width: 32%;
+    line-height: 300%;
+    background-color: #f3d90b;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    z-index: 10;
+}
+
+.about-button:before {
+    position: absolute;
+    bottom: -18%;
+    left: -10%;
+    content: "";
+    width: 122%;
+    height: 138%;
+    padding: 18% 10%;
+    border: 2px solid #f3d90b;
+}
+
+.about-right img{
+  width: 100%;
+}
+
+/*index-product*/
+
+.index-product {
+    width: 100%;
+}
+
+.product-left, .product-right {
+    position: relative;
+    float: left;
+}
+
+.product-left {
+    width: 70%;
+}
+
+.product-right {
+    width: 30%;
+}
+
+.product-control {
+    position: absolute;
+    bottom: 1%;
+    left: 5%;
+    padding: 0;
+    text-align: center;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.product-control li {
+    display: block;
+    float: left;
+    width: 10px;
+    height: 10px;
+    margin: 1em;
+    border-radius: 50%;
+    border: 0.5em solid #999;
+    background: #999;
+}
+
+.product-control .active {
+    position: relative;
+    border-radius: 50%;
+    border: 0.5em solid orange;
+    background: orange;
+}
+
+.active::before {
+    position: absolute;
+    bottom: -1.0em;
+    left: -1.0em;
+    content: "";
+    width: 2em;
+    height: 2em;
+    border-radius: 50%;
+    border: 1px solid orange;
+}
+
+.product-images {
+    position: relative;
+    width: 100%;
+    height: 60em;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.image-item {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.image-item img {
+    width: 100%;
+    transition: all 0.5s ease;
+}
+
+.product-right {
+    color: #00a381;
+}
+
+.product-right p {
+    width: 100%;
+    text-align: center;
+    margin: 12em auto 3em auto;
+    text-indent: 14em;
+    font-size: 1.3em;
+}
+
+.product-button {
+    margin: 4em auto auto auto;
+    -webkit-transform: translate(4em, 1em);
+    transform: translate(4em, 1em);
+    background-color: #00a381;
+}
+
+.product-button:before {
+    position: absolute;
+    bottom: -0.5em;
+    left: -1em;
+    content: "";
+    width: 12em;
+    height: 4em;
+    padding: 1em 2em;
+    border: 2px solid #00a381;
+}
+
+
+/*index-service*/
+
+.index-service {
+}
+.service-left .mask{
+  background-color: rgba(255, 255 , 255, 0.4);
+}
+.service-left {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 43%;
+    height: 100%;
+}
+.service-left p{
+  width: 60%;
+  margin: 1em auto;
+  color: #f8b62d;
+  font-size: 18px;
+  z-index: 10;
+}
+.service-button{
+  background-color: #f8b62d;
+  margin: 20em auto 4em auto;
+  -webkit-transform: translate(-8em,0em);
+  transform: translate(-8em,0em);
+}
+.service-button:before{
+  position: absolute;
+  bottom: -0.6em;
+  left: -1em;
+  content: "";
+  width: 12em;
+  height: 4.2em;
+  padding: 1em 2em;
+  border: 2px solid #F8B62D;
+}
+.index-service img {
+    width: 100%;
+}
+/*index-marketing*/
+.index-marketing{
+  color: #fff;
+}
+.index-marketing img{
+  width: 100%;
+}
+.marketing-container{
+  position: absolute;
+  width: 40%;
+  top: 0;
+  left: 0;
+  padding: 1em;
+  font-size: 1.2em;
+}
+.marketing-button{
+  background-color: #fff;
+  color: #999;
+  margin: 14em auto 1em auto;
+  transform: translate(-9.2em,1em);
+}
+.marketing-button:before{
+  position: absolute;
+  bottom: -0.5em;
+  left: -1em;
+  content: "";
+  width: 12em;
+  height: 4em;
+  padding: 1em 2em;
+  border: 2px solid #fff;
+}
+.marketing-container p{
+  width: 90%;
+  margin:5em auto auto 6em;
+}
+@media  (max-width:1440px) {
+  .slogan h3{
+    font-size: 12px;
+  }
+}
+
+@media (max-width:768px){
+  .left-container{
+    width: 100%;
+    margin: 0;
+  }
+  .left-container p {
+    display: none;
+  }
+  .about-button{
+    left: 50%;
+    margin-left: -25%;
+    margin-top: 20%;
+  }
+
+  .about-button,.product-button, .service-button,.marketing-button{
+    font-size: 8px;
+  }
+  .product-images{
+    height: 8em;
+  }
+}
+</style>
 <script type="text/javascript">
     window.onload = function() {
         const images = Array.from($$('.image-item')),
@@ -120,13 +449,13 @@
 <script type="text/javascript">
     const down = document.getElementById('double-down')
     let t = 1000
-    let long = 1200
+    let long = 900
     down.addEventListener('click', function() {
         let scrollTimer = setInterval(function() {
             document.body.scrollTop += 10
             document.documentElement.scrollTop += 10
             let scroolTop = document.body.scrollTop || document.documentElement.scrollTop
-            if (scroolTop === long) {
+            if (scroolTop > long) {
                 clearInterval(scrollTimer)
             }
         }, t / 1000)

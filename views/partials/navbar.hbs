@@ -1,5 +1,5 @@
 <!-- 导航栏 -->
-<ul class="navbar col-md-offset-5">
+<ul class="navbar">
     <li><a href="/" {{#if isIndex  }} style="color:#f4f4f4;" {{/if}} {{#if isAbout }} style='color:#f4f4f4' {{/if}}>{{ navbar.index }}</a></li>
     <li><a href="/products" {{#if isIndex  }} style="color:#f4f4f4;" {{/if}} {{#if isAbout }} style='color:#f4f4f4' {{/if}}>{{navbar.products}}</a></li>
     <li><a href="/service" {{#if isIndex }} style="color:#f4f4f4;" {{/if}} {{#if isAbout }} style='color:#f4f4f4' {{/if}}>{{navbar.service}}</a></li>
@@ -14,12 +14,14 @@
     /*导航栏*/
     .navbar {
         position: absolute;
+        width: 100%;
         top: 0;
         left: 0;
         padding-top: 1em;
         padding-left: 10em;
         font-size: 16px;
         z-index: 100;
+        text-align: right;
     }
 
     .navbar li {
@@ -47,4 +49,10 @@
     #language {
         border: 2px solid transparent;
     }
+    @media (max-width:768px){
+      .navbar{
+        display: none;
+      }
+    }
+
 </style>
