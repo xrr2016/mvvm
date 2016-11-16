@@ -94,13 +94,7 @@ ul {
     left: 50%;
     -webkit-animation: blink 1.5s linear infinite;
     animation: blink 1.5s linear infinite;
-    /*transition: all .2s ease;*/
 }
-
-
-/*.double-down:hover{
-  transform: scale(1.1);
-}*/
 
 @keyframes blink {
     0% {
