@@ -7,6 +7,4 @@ gulp.task('imgMin',function () {
              .pipe(gulp.dest('./dist/images/'))
 })
 
-gulp.task('default',function () {
-  gulp.start(['imgMin'])
-})
+gulp.task('default',['imgMin'])
