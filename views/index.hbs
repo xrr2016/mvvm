@@ -86,9 +86,6 @@
     </div>
 </div>
 <style media="screen">
-.navbar-active{
-  border: 2px solid orange;
-}
 /*index-banner*/
 
 .index-banner {
@@ -427,29 +424,31 @@
     display: none;
   }
 }
+
 </style>
 <script type="text/javascript">
     window.onload = function() {
-        const images = Array.from($$('.image-item')),
+        var images = Array.from($$('.image-item')),
             control = Array.from($$('.control-item'))
         control.forEach(function(el) {
-            let self = el
+            var self = el
             el.addEventListener('click', function() {
                 clearInterval(timer)
                 control.map(function(el) {
                     el.className = ''
                 })
                 self.className += "active"
-                let index = self.dataset.index
-                for (let i = 0; i < images.length; i++) {
+                var index = self.dataset.index
+                for (var i = 0; i < images.length; i++) {
                     images[i].childNodes[0].style.opacity = '0'
                 }
                 images[index].childNodes[0].style.opacity = '1'
             })
         })
-        let timer = setInterval(function() {
-            let index = Math.floor(Math.random() * control.length)
-            for (let i = 0; i < control.length; i++) {
+
+        var timer = setInterval(function() {
+            var index = Math.floor(Math.random() * control.length)
+            for (var i = 0; i < control.length; i++) {
                 control[i].className = ''
                 images[i].childNodes[0].style.opacity = '0'
             }
@@ -463,13 +462,13 @@
     }
 </script>
 <script type="text/javascript">
-    const down = document.getElementById('double-down')
-    let long = 1100
+    var down = document.getElementById('double-down')
+    var long = 1100
     down.addEventListener('click', function() {
-        let scrollTimer = setInterval(function() {
+        var scrollTimer = setInterval(function() {
             document.body.scrollTop += 10
             document.documentElement.scrollTop += 10
-            let scroolTop = document.body.scrollTop || document.documentElement.scrollTop
+            var scroolTop = document.body.scrollTop || document.documentElement.scrollTop
             if (scroolTop > long) {
                 clearInterval(scrollTimer)
             }
