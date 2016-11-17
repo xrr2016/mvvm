@@ -1,3 +1,99 @@
 <div class="container">
-  <h1>products</h1>
+  <img src="/images/products/products.png" alt="我们的产品" class="products-background"/>
+  <ul class="products-list">
+    <li class="products-list-item">
+      <img src="/images/products/intel.png" alt="智能产品" />
+      <a href="#">智能产品</a>
+    </li>
+    <li class="products-list-item">
+      <img src="/images/products/gift.png" alt="礼品系列" />
+      <a href="#">礼品系列</a>
+    </li>
+    <li class="products-list-item">
+      <img src="/images/products/daily.png" alt="日常用品" />
+      <a href="#">日常用品</a>
+    </li>
+  </ul>
 </div>
+<div class="container clearfix">
+    <div class="products-tag">
+      <ul class="tag-list">
+        <li class="tag-item active">智能产品系列</li>
+        <li class="tag-item">日常产品系列</li>
+        <li class="tag-item">礼品系列</li>
+      </ul>
+    </div>
+    <ul class="intel-list">
+      {{#each intel }}
+        <li class="intel-item">
+          <!-- <div class="mask">
+            <a href="#">查看详情</a>
+            <p>{{this.description}}</p>
+          </div> -->
+          <img src="{{this.src}}" alt="" />
+        </li>
+      {{/each}}
+    </ul>
+    <i class="fa fa-chevron-right fa-2x go-right" aria-hidden="true" ></i>
+</div>
+
+<style media="screen">
+  .products-background{
+    width: 100%;
+  }
+  .products-list{
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    padding: 0 14%;
+    margin-top: -10%;
+  }
+  .products-list-item{
+    display: inline-block;
+    margin: 0% 2%;
+    text-align: center;
+  }
+  .products-list-item img{
+    width: 60%;
+  }
+  .products-list-item a{
+    display: block;
+    font-size: 40px;
+    color: #fff;
+    margin-top: 20%;
+  }
+
+  .products-tag{
+    width: 10%;
+    padding: 0;
+    float: left;
+  }
+  .active{
+    border-bottom: 2px solid #bbc8e6;
+  }
+  .tag-list{
+    width: 88%;
+    padding: 10% 20% 10% 0;
+  }
+  .intel-list{
+    float: right;
+    padding: 0;
+  }
+  .intel-item{
+    width: 24%;
+    display: inline-block;
+  }
+  .intel-item img{
+    width: 50%;
+  }
+  .go-right{
+    position: absolute;
+    top: 50%;
+    right: 5%;
+  }
+</style>
+
+<script type="text/javascript">
+
+</script>
