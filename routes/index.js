@@ -136,6 +136,7 @@ router.get('/contact', function(req, res, next) {
         })
     })
     // 产品个例
+    
 router.get('/products/:id', function(req, res, next) {
     let id = req.params.id
     res.render('pages/product', {
@@ -144,7 +145,6 @@ router.get('/products/:id', function(req, res, next) {
         id:id
     })
 })
-
 
 
 module.exports = router
