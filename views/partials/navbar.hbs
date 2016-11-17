@@ -1,4 +1,7 @@
 <!-- 导航栏 -->
+{{#if logo }}
+    <img src="/images/logo2.png" alt="唐图文创" class="logo" />
+{{/if}}
 <ul class="navbar">
     <li><a href="/" {{#if isIndex  }} style="color:#f4f4f4;" {{/if}} {{#if isAbout }} style='color:#f4f4f4' {{/if}}>{{ navbar.index }}</a></li>
     <li><a href="/products" {{#if isIndex  }} style="color:#f4f4f4;" {{/if}} {{#if isAbout }} style='color:#f4f4f4' {{/if}}>{{navbar.products}}</a></li>
@@ -11,7 +14,15 @@
     <li><a href="#" id="language" {{#if isIndex  }} style="color:#f4f4f4;" {{/if}} {{#if isAbout }} style='color:#f4f4f4' {{/if}}>CN <span class="caret"></span></a></li>
 </ul>
 <style>
+    .logo {
+        position: absolute;
+        top: 2%;
+        left: 2%;
+        width: 8%;
+        z-index: 10;
+    }
     /*导航栏*/
+
     .navbar {
         position: absolute;
         width: 100%;
@@ -49,10 +60,10 @@
     #language {
         border: 2px solid transparent;
     }
-    @media (max-width:768px){
-      .navbar{
-        display: none;
-      }
-    }
 
+    @media (max-width:768px) {
+        .navbar {
+            display: none;
+        }
+    }
 </style>
