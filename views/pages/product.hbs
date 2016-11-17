@@ -1,3 +1,137 @@
 <div class="container">
-  
+    <div class="product-container clearfix">
+        <div class="product-left">
+            <ul class="left-list">
+              <li class="left-list-item left-list-item-active">智能产品系列</li>
+              <li class="left-list-item">日常用品系列</li>
+              <li class="left-list-item">礼品系列</li>
+            </ul>
+        </div>
+        <div class="product-mid">
+          <img src="/images/products/cup.png" alt="" />
+          <div class="des-box">
+            <h2 class="des-title">唐图水杯</h2>
+            <p class="des-content">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magnafficia deserunt mollit anim id est laborum.
+            </p>
+          </div>
+        </div>
+        <div class="product-right">
+          <img src="/images/products/cup.png" alt=""  class="product-main-img" />
+          <ul class="product-img-list">
+            <li class="img-list-item"><img src="/images/products/cup.png" alt="" /></li>
+            <li class="img-list-item"><img src="/images/products/cup.png" alt="" /></li>
+            <li class="img-list-item"><img src="/images/products/cup.png" alt="" /></li>
+          </ul>
+        </div>
+    </div>
 </div>
+
+<style media="screen">
+  .product-container{
+    width: 100%;
+    margin-top: 4%;
+    border: 16px solid #00a497;
+  }
+  .product-left,.product-mid,.product-right{
+    height: 100%;
+    float: left;
+  }
+  .product-left{
+    width: 20%;
+  }
+  .product-mid{
+    width: 30%;
+  }
+  .product-right{
+    position: relative;
+    width: 50%;
+  }
+  .left-list{
+    position: relative;
+    transform: translate(0,120%);
+    margin-top: -25%;
+    width: 60%;
+    margin: 0;
+    padding: 14% 2% 14% 10%;
+    padding-left: 10%;
+    background-color: #ddd;
+  }
+  .left-list-item{
+    width: 80%;
+    line-height: 100%;
+    padding: 12px 12px 10px 0;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: bold;
+    border-bottom: 4px solid transparent;
+  }
+  .left-list-item-active{
+    border-bottom: 4px solid #00a497;
+  }
+  /*product-mid*/
+  .product-mid img{
+    display: block;
+    width: 40%;
+    margin: 20% auto 20% 0;
+  }
+  .des-box{
+    width: 60%;
+    height: 30%;
+    padding-left: 4%;
+    padding-bottom: 5%;
+    padding-top: 5%;
+    margin-top: 20%;
+    margin-bottom: 20%;
+    border-left: 16px solid #ddd;
+  }
+  .des-tilte{
+    font-size: 24px;
+    font-weight: bold;
+  }
+  .des-content{
+    margin-top: 12%;
+    margin-bottom: 12%;
+    font-size: 16px;
+    letter-spacing: 1px;
+    word-spacing: 1px;
+  }
+  /*product-right*/
+  .product-main-img{
+    display: block;
+    position: absolute;
+    width: 45%;
+    left: 0%;
+    -webkit-transform: translate(0%,20%);
+    transform: translate(0%,20%);
+  }
+  .product-main-img:after{
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    content: ""
+    width:100%;
+    height: 100;
+    border: 4px solid #ddd;
+  }
+  .product-img-list{
+    position: absolute;
+    width: 30%;
+    right: 0;
+    padding: 0;
+    margin: 0;
+    -webkit-transform: translate(0%,20%);
+    transform: translate(0%,20%);
+  }
+  .img-list-item{
+    padding: 5%;
+    height: 33%;
+  }
+  .img-list-item img{
+    width: 70%;
+    border-left: 16px solid #ddd;
+    border-right: 16px solid #ddd;
+    border-top: 10px solid #ddd;
+    border-bottom: 10px solid #ddd;
+  }
+</style>

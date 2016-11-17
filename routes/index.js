@@ -138,9 +138,10 @@ router.get('/contact', function(req, res, next) {
     // 产品个例
 router.get('/products/:id', function(req, res, next) {
     let id = req.params.id
-    res.render('product', {
+    res.render('pages/product', {
         navbar: navbar,
-        logo: true
+        logo: true,
+        id:id
     })
 })
 
