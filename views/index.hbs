@@ -450,8 +450,7 @@
 </script>
 <script type="text/javascript">
     const down = document.getElementById('double-down')
-    let t = 1000
-    let long = 900
+    let long = 1100
     down.addEventListener('click', function() {
         let scrollTimer = setInterval(function() {
             document.body.scrollTop += 10
@@ -460,6 +459,6 @@
             if (scroolTop > long) {
                 clearInterval(scrollTimer)
             }
-        }, t / 1000)
+        }, 1)
     })
 </script>

@@ -11,6 +11,11 @@ const navbar = {
     contact: '联系我们'
 }
 
+const products = {
+  item01:{src : '/images/service/cup.png',description:'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor occaecat cia deserunt mollit anim id est laborum.'},
+  item02:{src : '/images/service/light.png',description:'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor occaecat cia deserunt mollit anim id est laborum.'},
+  item03:{src : '/images/service/tape.png',description:'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor occaecat cia deserunt mollit anim id est laborum.'},
+}
 
 //首页
 router.get('/', function(req, res, next) {
@@ -28,7 +33,8 @@ router.get('/products', function(req, res, next) {
     // 服务页面
 router.get('/service', function(req, res, next) {
         res.render('pages/service', {
-            navbar: navbar
+            navbar: navbar,
+            products:products
         })
     })
     // 关于我们

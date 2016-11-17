@@ -1,1 +1,135 @@
-<h1>service</h1>
+<img src="/images/logo2.png" alt="" class="logo" />
+<div class="container">
+    <img src="/images/service/service.png" alt="" class="service-img" />
+    <h1 class="service-title">我们的服务</h1>
+    <p class="service-description">
+        千变万化 <br> 永远寻找最好的一块拼图给客户
+    </p>
+</div>
+<div class="container products-container">
+    <h2>全部案例</h2>
+    <ul class="service-products-list">
+        {{#each products }}
+            <li class="products-list-item">
+                <span class="mask">
+                   <a href="#">查看详情</a>
+                   <p>{{this.description}}</p>
+                </span>
+                <img src="{{this.src}}" alt="" />
+            </li>
+        {{/each}}
+    </ul>
+    <ul class="service-products-list">
+        {{#each products }}
+            <li class="products-list-item">
+                <span class="mask">
+                   <a href="#">查看详情</a>
+                   <p>{{this.description}}</p>
+                </span>
+                <img src="{{this.src}}" alt="" />
+            </li>
+        {{/each}}
+    </ul>
+    <ul class="service-products-list">
+        {{#each products }}
+            <li class="products-list-item">
+                <span class="mask">
+                   <a href="#">查看详情</a>
+                   <p>{{this.description}}</p>
+                </span>
+                <img src="{{this.src}}" alt="" />
+            </li>
+        {{/each}}
+    </ul>
+    <ul class="service-products-list">
+        {{#each products }}
+            <li class="products-list-item">
+                <span class="mask">
+                   <a href="#">查看详情</a>
+                   <p>{{this.description}}</p>
+                </span>
+                <img src="{{this.src}}" alt="" />
+            </li>
+        {{/each}}
+    </ul>
+</div>
+<style media="screen">
+    .logo {
+        position: absolute;
+        top: 2%;
+        left: 2%;
+        width: 8%;
+        z-index: 10;
+    }
+
+    .service-img {
+        width: 100%;
+    }
+
+    .service-title {
+        position: absolute;
+        top: 34%;
+        left: 8%;
+        color: #fff;
+        font-size: 90px;
+        font-weight: normal;
+    }
+
+    .service-description {
+        position: absolute;
+        font-size: 20px;
+        color: #fff;
+        top: 50%;
+        left: 8%;
+        line-height: 200%;
+    }
+
+    .products-container {
+        padding: 1% 5%;
+    }
+
+    .products-container h2 {
+        margin: 4% auto;
+    }
+
+    .service-products-list {
+        width: 100%;
+        padding: 0;
+        margin-bottom: 5%;
+    }
+
+    .products-list-item {
+        position: relative;
+        display: inline-block;
+        width: 32%;
+        margin: 1% 1% 1% 0;
+    }
+    .products-list-item:hover .mask{
+      display: block;
+    }
+    .products-list-item img {
+        width: 100%;
+    }
+
+    .products-list-item .mask{
+      display: none;
+      width: 100%;
+      padding: 30% 10% 10% 10%;
+      text-align: center;
+      -webkit-transition: all 0.4s ease;
+      transition: all 0.4s ease;
+    }
+    .products-list-item .mask a{
+      font-size:24px;
+      border-bottom: 1px solid #fff;
+    }
+    .products-list-item .mask a:hover{
+      color: #fff;
+      opacity: 0.5;
+    }
+    .products-list-item .mask p{
+      font-size: 16px;
+      color: #f4f4f4;
+      margin-top: 4%;
+    }
+</style>
