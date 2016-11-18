@@ -230,11 +230,11 @@
 }
 
 .product-control li {
-    display: block;
+    display: inline-block;
     float: left;
     width: 10px;
     height: 10px;
-    margin: 1em;
+    margin: 10px;
     border-radius: 50%;
     border: 0.5em solid #999;
     background: #999;
@@ -244,7 +244,7 @@
     position: relative;
     border-radius: 50%;
     border: 0.5em solid orange;
-    background: orange;
+    background-color: orange;
 }
 
 .active::before {
@@ -288,24 +288,23 @@
     text-align: center;
     margin: 60% auto 2% auto;
     text-indent: 14em;
-    font-size: 1.3em;
+    font-size: 18px;
 }
 
 .product-button {
-    margin: 4em auto auto auto;
-    -webkit-transform: translate(4em, 1em);
-    transform: translate(4em, 1em);
+    margin: 12% auto auto auto;
+    -webkit-transform: translate(20%, 10%);
+    transform: translate(20%, 10%);
     background-color: #00a381;
 }
 
 .product-button:before {
     position: absolute;
-    bottom: -0.5em;
-    left: -1em;
+    bottom: -20%;
+    left: -10%;
     content: "";
-    width: 12em;
-    height: 4em;
-    padding: 1em 2em;
+    width: 120%;
+    height: 140%;
     border: 2px solid #00a381;
 }
 
@@ -335,17 +334,16 @@
   width: 22%;
   background-color: #f8b62d;
   margin: 40% auto 18% auto;
-  -webkit-transform: translate(-20%,0em);
-  transform: translate(-20%,0em);
+  -webkit-transform: translate(-20%,0);
+  transform: translate(-20%,0);
 }
 .service-button:before{
   position: absolute;
   bottom: -0.6em;
   left: -1em;
   content: "";
-  width: 12em;
-  height: 4.2em;
-  padding: 1em 2em;
+  width: 120%;
+  height: 140%;
   border: 2px solid #F8B62D;
 }
 .index-service img {
@@ -378,14 +376,13 @@
   bottom: -0.5em;
   left: -1em;
   content: "";
-  width: 12em;
-  height: 4em;
-  padding: 1em 2em;
+  width: 120%;
+  height: 140%;
   border: 2px solid #fff;
 }
 .marketing-container p{
   width: 90%;
-  margin:5em auto auto 6em;
+  margin:12% auto auto 13%;
 }
 @media  (max-width:1440px) {
   .slogan h3{
@@ -396,17 +393,35 @@
 }
 
 @media (max-width:768px){
+  #double-down{
+    display: none;
+  }
   .left-container{
     width: 100%;
     margin: 0;
   }
+  .about-button,.product-button, .service-button,.marketing-button{
+    width: 90px;
+    left: 16%;
+    padding: 0;
+    font-size: 8px;
+  }
   .about-button{
-    left: 50%;
-    margin-left: -25%;
     margin-top: 20%;
   }
-  .about-button,.product-button, .service-button,.marketing-button{
-    font-size: 8px;
+  .about-button:before{
+    padding: 0;
+  }
+  .product-button{
+    left: 12%;
+    margin-top: 33%;
+  }
+  .marketing-button{
+    left: 80%;
+    margin-top: 30%;
+  }
+  .product-left{
+    width: 60%;
   }
   .product-images{
     height: 8em;
