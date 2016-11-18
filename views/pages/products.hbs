@@ -15,7 +15,8 @@
     </li>
   </ul>
 </div>
-<div class="container clearfix">
+
+<div class="container products-container clearfix">
     <div class="products-tag">
       <ul class="tag-list">
         <li class="tag-item active">智能产品系列</li>
@@ -23,18 +24,20 @@
         <li class="tag-item">礼品系列</li>
       </ul>
     </div>
-    <ul class="intel-list">
-      {{#each intel }}
-        <li class="intel-item">
-          <!-- <div class="mask">
-            <a href="#">查看详情</a>
-            <p>{{this.description}}</p>
-          </div> -->
-          <img src="{{this.src}}" alt="" />
-        </li>
-      {{/each}}
-    </ul>
-    <i class="fa fa-chevron-right fa-2x go-right" aria-hidden="true" ></i>
+    <div class="list-viewport">
+      <ul class="intel-list">
+        {{#each intel }}
+          <li class="intel-item">
+            <!-- <div class="mask">
+              <a href="#">查看详情</a>
+              <p>{{this.description}}</p>
+            </div> -->
+            <img src="{{this.src}}" alt="" />
+          </li>
+        {{/each}}
+      </ul>
+    </div>
+    <i class="fa fa-chevron-right fa-5x go-right" aria-hidden="true" ></i>
 </div>
 
 <style media="screen">
@@ -50,6 +53,7 @@
     margin-top: -10%;
   }
   .products-list-item{
+    width: 28%;
     display: inline-block;
     margin: 0% 2%;
     text-align: center;
@@ -63,11 +67,16 @@
     color: #fff;
     margin-top: 20%;
   }
-
+  /*产品*/
+  .products-container{
+    margin: 5% 0;
+  }
+  /*标签*/
   .products-tag{
+    float: left;
     width: 10%;
     padding: 0;
-    float: left;
+    background-color: #ddd;
   }
   .active{
     border-bottom: 2px solid #bbc8e6;
@@ -76,8 +85,19 @@
     width: 88%;
     padding: 10% 20% 10% 0;
   }
-  .intel-list{
+  .tag-item{
+    margin: 10%;
+    font-size: 20px;
+  }
+  .list-viewport{
     float: right;
+    width: 80%;
+    margin-left: 10%;
+    padding: 2% 5% 2% 0;
+    background-color: #ddd;
+    overflow: hidden;
+  }
+  .intel-list{
     padding: 0;
   }
   .intel-item{
@@ -85,15 +105,21 @@
     display: inline-block;
   }
   .intel-item img{
-    width: 50%;
+    width: 100%;
   }
   .go-right{
     position: absolute;
     top: 50%;
     right: 5%;
   }
+  @media (max-width:768px) {
+    .products-list-item a{
+      font-size: 12px;
+    }
+  }
 </style>
 
 <script type="text/javascript">
-
+  var innerH = window.innerHeight
+  console.log(innerH)
 </script>

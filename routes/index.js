@@ -146,25 +146,25 @@ router.get('/contact', function(req, res, next) {
     })
     // 产品个例
 
-    const cup = {
+const cup = {
       name: '唐图水杯',
       route: 'products/cup',
       src: '/images/products/cup.png',
       description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor occaecat cia deserunt mollit anim id est laborum.'
     }
-    const light = {
+const light = {
       name: '唐图台灯',
       route: 'products/light',
       src: '/images/products/light.png',
       description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor occaecat cia deserunt mollit anim id est laborum.'
     }
-    const tape = {
+const tape = {
       name: '唐图胶带',
       route: 'products/tape',
       src: '/images/products/tape.png',
       description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor occaecat cia deserunt mollit anim id est laborum.'
     }
-    const ball = {
+const ball = {
       name: '唐图水晶球',
       route: 'products/ball',
       src: '/images/products/ball.png',

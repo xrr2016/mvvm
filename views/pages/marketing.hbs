@@ -1,34 +1,114 @@
-<!-- <img src="/images/logo2.png" alt="唐图文创"  class="logo"/> -->
 <div class="container clearfix">
     <div class="location">
-      <select class="location-select">
-      <option value="珠海">珠海</option>
-      <option value="广州">广州</option>
-      <option value="深圳">深圳</option>
-      <option value="中山">中山</option>
-      <p class="description">
-        广东省珠海市唐家湾港湾大道民营科技园主楼407-408室 <br> 407-408 room, main building, private science and Technology Park, Zhuhai City, Guangdong Province <br> 0756-3622280 | 0756-3622290
+      <h1 class="address">珠海</h1>
+      <div class="control-box">
+        <i class="fa fa-caret-up fa-5x" aria-hidden="true" id="prevAddress"></i>
+        <i class="fa fa-caret-down fa-5x" aria-hidden="true" id="nextAddress"></i>
+      </div>
+      <p class="address-content">
+        广东省珠海市唐家湾港湾大道民营科技园主楼407-408室 <br> 407-408 room, main building, private science and Technology Park, Zhuhai City, Guangdong Province  0756-3622280 | 0756-3622290
       </p>
-    </select>
     </div>
-    <div class="baidu-map">
-      <iframe src="http://map.baidu.com/" width="wo" height=""></iframe>
-    </div>
-</div>
+     <div class="baidu-map">
+      <iframe src="http://map.baidu.com/" height="800" id="baiduMap" ></iframe>
+     </div>
 <style media="screen">
-
+  .fa{
+    display: block;
+    cursor: pointer;
+    color: #fff;
+  }
+  .fa:hover{
+    opacity: 0.8;
+  }
     .location,
     .baidu-map {
         margin-top: 4%;
     }
     .location {
+        position: relative;
         width: 45%;
         float: left;
+        color: #fff;
+        text-align: center;
+        background-color: orange;
     }
+    .address{
+        margin: 6% auto;
+        font-size: 48px;
+    }
+    .control-box{
+      position: absolute;
+      top: 2%;
+      right: 7%;
+    }
+    .address-content{
+      width: 100%;
+      padding: 6% 5%;
+      letter-spacing: 2px;
+      word-spacing: 1px;
+      margin: 6% auto;
+      font-size: 20px;
+      line-height: 200%;
+    }
+    /*地图*/
     .baidu-map{
+      width: 55%;
       float: right;
+    }
+    .baidu-map iframe{
+      width: 100%;
+      border: none;
+    }
+
+    @media (max-width:768px) {
+      .location,.baidu-map{
+        margin-top: 0;
+        width: 100%;
+      }
+      .baidu-map iframe{
+        height: 300px;
+      }
+      .logo{
+        display: none;
+      }
+      .address{
+        font-size: 20px;
+      }
+      .address-content{
+        font-size: 12px;
+      }
     }
 </style>
 <script type="text/javascript">
+  var next = document.getElementById('nextAddress'),
+      prev = document.getElementById('prevAddress'),
+      addressName = document.querySelector('.address'),
+      addressContent = document.querySelector('.address-content')
 
+  var address = [
+    {name:'珠海',content:'  广东省珠海市唐家湾港湾大道民营科技园主楼407-408室 <br> 407-408 room, main building, private science and Technology Park, Zhuhai City, Guangdong Province  0756-3622280 | 0756-3622290'},
+    {name:'广州',content:'  广东省广州市 <br>  GuangZhou City, Guangdong Province  0756-3622280 | 0756-3622290'},
+    {name:'深圳',content:'  广东省深圳市 <br>  ShenZheng City, Guangdong Province  0756-3622280 | 0756-3622290'},
+    {name:'中山',content:'  广东省中山市 <br>  ZhongShan City, Guangdong Province  0756-3622280 | 0756-3622290'}
+  ]
+  var index = 0
+  next.addEventListener('click',function(){
+    index++
+    if(index > 3) {
+      index = 3
+      return
+    }
+    addressName.innerHTML = address[index].name
+    addressContent.innerHTML = address[index].content
+  })
+  prev.addEventListener('click',function(){
+    index--
+    if(index < 0 ) {
+      index = 0
+      return
+    }
+    addressName.innerHTML = address[index].name
+    addressContent.innerHTML = address[index].content
+  })
 </script>

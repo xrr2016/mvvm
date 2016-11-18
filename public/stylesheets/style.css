@@ -42,7 +42,7 @@ ul {
 
 .page-wrap {
     min-height: 90%;
-    margin-bottom: 0;
+    margin-bottom: 0px;
 }
 
 .page-wrap:after {
