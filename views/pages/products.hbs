@@ -1,125 +1,286 @@
 <div class="container">
-  <img src="/images/products/products.png" alt="我们的产品" class="products-background"/>
-  <ul class="products-list">
-    <li class="products-list-item">
-      <img src="/images/products/intel.png" alt="智能产品" />
-      <a href="#">智能产品</a>
-    </li>
-    <li class="products-list-item">
-      <img src="/images/products/gift.png" alt="礼品系列" />
-      <a href="#">礼品系列</a>
-    </li>
-    <li class="products-list-item">
-      <img src="/images/products/daily.png" alt="日常用品" />
-      <a href="#">日常用品</a>
-    </li>
-  </ul>
+    <img src="/images/products/products.png" alt="我们的产品" class="products-background" />
+    <ul class="products-list">
+        <li class="products-list-item">
+            <img src="/images/products/intel.png" alt="智能产品" />
+            <a href="#">智能产品</a>
+        </li>
+        <li class="products-list-item">
+            <img src="/images/products/gift.png" alt="礼品系列" />
+            <a href="#">礼品系列</a>
+        </li>
+        <li class="products-list-item">
+            <img src="/images/products/daily.png" alt="日常用品" />
+            <a href="#">日常用品</a>
+        </li>
+    </ul>
 </div>
-
 <div class="container products-container clearfix">
     <div class="products-tag">
-      <ul class="tag-list">
-        <li class="tag-item active">智能产品系列</li>
-        <li class="tag-item">日常产品系列</li>
-        <li class="tag-item">礼品系列</li>
-      </ul>
+        <ul class="tag-list">
+            <li class="tag-item ">智能产品系列</li>
+            <span class="divider">
+              <span class="divider-inner active" ></span>
+            </span>
+            <li class="tag-item">日常产品系列</li>
+            <span class="divider">
+          <span class="divider-inner" style="width:0px"></span>
+            </span>
+            <li class="tag-item">礼品系列</li>
+            <span class="divider">
+          <span class="divider-inner" style="width:0px"></span>
+            </span>
+        </ul>
     </div>
     <div class="list-viewport">
-      <ul class="intel-list">
-        {{#each intel }}
-          <li class="intel-item">
-            <!-- <div class="mask">
-              <a href="#">查看详情</a>
-              <p>{{this.description}}</p>
-            </div> -->
-            <img src="{{this.src}}" alt="" />
-          </li>
-        {{/each}}
-      </ul>
+        <i class="fa fa-chevron-left fa-5x go-left" aria-hidden="true" id="goLeft"></i>
+        <ul class="intel-list">
+            {{#each intel }}
+                <li class="intel-item">
+                    <div class="mask">
+                      <p>
+                        <a href="{{this.route}}">{{this.name}}</a>
+                        {{this.description}}
+                      </p>
+                    </div>
+                    <img src="{{this.src}}" alt="" />
+                </li>
+            {{/each}}
+        </ul>
+        <i class="fa fa-chevron-right fa-5x go-right" aria-hidden="true" id="goRight"></i>
     </div>
-    <i class="fa fa-chevron-right fa-5x go-right" aria-hidden="true" ></i>
 </div>
-
+<div class="container products-container clearfix">
+    <div class="list-viewport">
+        <i class="fa fa-chevron-left fa-5x go-left" aria-hidden="true" id="goLeft"></i>
+        <ul class="intel-list">
+            {{#each intel }}
+                <li class="intel-item">
+                    <div class="mask">
+                      <p>
+                        <a href="{{this.route}}">{{this.name}}</a>
+                        {{this.description}}
+                      </p>
+                    </div>
+                    <img src="{{this.src}}" alt="" />
+                </li>
+            {{/each}}
+        </ul>
+        <i class="fa fa-chevron-right fa-5x go-right" aria-hidden="true" id="goRight"></i>
+    </div>
+    <div class="products-tag">
+        <ul class="tag-list">
+            <li class="tag-item">智能产品系列</li>
+            <span class="divider">
+              <span class="divider-inner" ></span>
+            </span>
+            <li class="tag-item">日常产品系列</li>
+            <span class="divider">
+                <span class="divider-inner"></span>
+            </span>
+            <li class="tag-item">礼品系列</li>
+            <span class="divider">
+                  <span class="divider-inner" ></span>
+            </span>
+        </ul>
+      </div>
+</div>
+<div class="container products-container clearfix">
+    <div class="products-tag">
+        <ul class="tag-list">
+            <li class="tag-item">智能产品系列</li>
+            <span class="divider">
+              <span class="divider-inner" ></span>
+            </span>
+            <li class="tag-item">日常产品系列</li>
+            <span class="divider">
+          <span class="divider-inner" ></span>
+            </span>
+            <li class="tag-item">礼品系列</li>
+            <span class="divider">
+              <span class="divider-inner"></span>
+            </span>
+        </ul>
+    </div>
+    <div class="list-viewport">
+        <i class="fa fa-chevron-left fa-5x go-left" aria-hidden="true" id="goLeft"></i>
+        <ul class="intel-list">
+            {{#each intel }}
+                <li class="intel-item">
+                    <div class="mask">
+                      <p>
+                        <a href="{{this.route}}">{{this.name}}</a>
+                        {{this.description}}
+                      </p>
+                    </div>
+                    <img src="{{this.src}}" alt="" />
+                </li>
+            {{/each}}
+        </ul>
+        <i class="fa fa-chevron-right fa-5x go-right" aria-hidden="true" id="goRight"></i>
+    </div>
+</div>
 <style media="screen">
-  .products-background{
-    width: 100%;
-  }
-  .products-list{
-    position: absolute;
-    top: 50%;
-    left: 0;
-    width: 100%;
-    padding: 0 14%;
-    margin-top: -10%;
-  }
-  .products-list-item{
-    width: 28%;
-    display: inline-block;
-    margin: 0% 2%;
-    text-align: center;
-  }
-  .products-list-item img{
-    width: 60%;
-  }
-  .products-list-item a{
-    display: block;
-    font-size: 40px;
-    color: #fff;
-    margin-top: 20%;
-  }
-  /*产品*/
-  .products-container{
-    margin: 5% 0;
-  }
-  /*标签*/
-  .products-tag{
-    float: left;
-    width: 10%;
-    padding: 0;
-    background-color: #ddd;
-  }
-  .active{
-    border-bottom: 2px solid #bbc8e6;
-  }
-  .tag-list{
-    width: 88%;
-    padding: 10% 20% 10% 0;
-  }
-  .tag-item{
-    margin: 10%;
-    font-size: 20px;
-  }
-  .list-viewport{
-    float: right;
-    width: 80%;
-    margin-left: 10%;
-    padding: 2% 5% 2% 0;
-    background-color: #ddd;
-    overflow: hidden;
-  }
-  .intel-list{
-    padding: 0;
-  }
-  .intel-item{
-    width: 24%;
-    display: inline-block;
-  }
-  .intel-item img{
-    width: 100%;
-  }
-  .go-right{
-    position: absolute;
-    top: 50%;
-    right: 5%;
-  }
-  @media (max-width:768px) {
-    .products-list-item a{
-      font-size: 12px;
+    .fa {
+        color: rgba(0, 0, 0, 0.5);
     }
-  }
+    .active{
+      width: 50%;
+    }
+    .products-background {
+        width: 100%;
+    }
+    .products-list {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 100%;
+        padding: 0 14%;
+        margin-top: -10%;
+    }
+    .products-list-item {
+        width: 28%;
+        display: inline-block;
+        margin: 0% 2%;
+        text-align: center;
+    }
+    .products-list-item img {
+        width: 60%;
+    }
+    .products-list-item a {
+        display: block;
+        font-size: 40px;
+        color: #fff;
+        margin-top: 20%;
+    }
+    /*产品*/
+    .products-container {
+        display: flex;
+        margin: 4% 0;
+        justify-content: space-between;
+    }
+    /*标签*/
+    .products-tag {
+        float: left;
+        width: 10%;
+        height: 80%;
+        padding: 0;
+        font-weight: bold;
+        background-color: #ddd;
+    }
+    .tag-list {
+        width: 100%;
+        padding: 10% 2% 10% 0;
+        margin: 0;
+    }
+    .tag-item {
+      width: 100%;
+      height: 30%;
+        font-size: 24px;
+        text-align: center;
+        cursor: pointer;
+        line-height: 200%;
+    }
+    .divider {
+        display: block;
+        width: 80%;
+        height: 4px;
+        margin: 0 auto;
+    }
+    .divider-inner {
+        display: block;
+        height: 100%;
+        background: blue;
+    }
+    .list-viewport {
+        position: relative;
+        width: 84%;
+        padding: 2% 4%;
+        background-color: #ddd;
+        overflow: hidden;
+    }
+    .intel-list {
+        padding: 0;
+        margin: 0;
+        padding-left: 3%;
+    }
+    .intel-item {
+        position: relative;
+        display: inline-block;
+        width: 24%;
+        margin-right: -4px;
+    }
+    .intel-item .mask{
+      display: none;
+      text-align: center;
+    }
+    .intel-item:hover .mask{
+      display: block;
+    }
+    .mask a{
+      display: block;
+      margin-top: 32%;
+      font-size: 24px;
+      margin-bottom: 4%;
+    }
+    .mask p{
+      letter-spacing: 1px;
+      color: #fff;
+      font-size: 16px;
+      padding: 2% 10%;
+    }
+    .mask p:hover{
+      opacity: 0.8;
+    }
+    .intel-item img {
+        width: 100%;
+    }
+    .go-right {
+        position: absolute;
+        top: 40%;
+        right: 2%;
+    }
+    .go-left {
+        position: absolute;
+        top: 40%;
+        left: 2%;
+    }
+    @media (max-width:768px) {
+        .products-list-item a {
+            font-size: 12px;
+        }
+    }
 </style>
 
 <script type="text/javascript">
-  var innerH = window.innerHeight
-  console.log(innerH)
+    var tagItem = Array.from(document.querySelectorAll('.tag-item'))
+    var dividerInner = Array.from(document.querySelectorAll('.divider-inner'))
+    for(var l = 1;l<dividerInner.length;l++){
+      dividerInner[l].style.width = '0px'
+    }
+    for (var i = 0; i < tagItem.length; i++) {
+        (function(j){
+          tagItem[j].addEventListener('click', function() {
+            for(var k = 0;k<dividerInner.length;k++){
+              dividerInner[k].style.width = '0px'
+            }
+            if(dividerInner[j].style.width !== '0px'){
+              return
+            }
+            wilder(dividerInner[j],1)
+          })
+        })(i)
+    }
+
+    function wilder(ele,target){
+      ele.style.width = String(target) + 'px'
+      setTimeout(function(){
+        if(target <= 120){
+          return wilder(ele,target + 1)
+        }
+      },1)
+    }
+
+    var innerH = window.innerHeight
+    console.log(innerH)
 </script>

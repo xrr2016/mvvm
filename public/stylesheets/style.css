@@ -18,9 +18,13 @@ a:hover {
 ul {
     list-style: none;
 }
-
+img{
+  outline-width:0px;
+  vertical-align:top;
+}
 .fa {
     color: #000;
+    cursor: pointer;
 }
 
 .container {
