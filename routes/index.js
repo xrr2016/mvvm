@@ -11,76 +11,85 @@ const navbar = {
     contact: '联系我们'
 }
 const products = {
-    item01: {
-        src: '/images/service/cup.png',
+    cup: {
+        name: '唐图水杯',
+        route: 'products/cup',
+        src: '/images/products/cup.png',
         description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor occaecat cia deserunt mollit anim id est laborum.'
     },
-    item02: {
-        src: '/images/service/light.png',
+    light: {
+        name: '唐图台灯',
+        route: 'products/light',
+        src: '/images/products/light.png',
         description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor occaecat cia deserunt mollit anim id est laborum.'
     },
-    item03: {
-        src: '/images/service/tape.png',
+    tape: {
+        name: '唐图胶带',
+        route: 'products/tape',
+        src: '/images/products/tape.png',
         description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor occaecat cia deserunt mollit anim id est laborum.'
-    },
+    }
 }
 
 const intel = {
-    item01: {
+    cup: {
+        name: '唐图水杯',
+        route: 'products/cup',
         src: '/images/products/cup.png',
         description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor occaecat cia deserunt mollit anim id est laborum.'
     },
-    item02: {
+    light: {
+        name: '唐图台灯',
+        route: 'products/light',
+        src: '/images/products/light.png',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor occaecat cia deserunt mollit anim id est laborum.'
+    },
+    tape: {
+        name: '唐图胶带',
+        route: 'products/tape',
+        src: '/images/products/tape.png',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor occaecat cia deserunt mollit anim id est laborum.'
+    },
+    ball: {
+        name: '唐图水晶球',
+        route: 'products/ball',
         src: '/images/products/ball.png',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor occaecat cia deserunt mollit anim id est laborum.'
-    },
-    item03: {
-        src: '/images/products/light.png',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor occaecat cia deserunt mollit anim id est laborum.'
-    },
-    item04: {
-        src: '/images/products/tape.png',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor occaecat cia deserunt mollit anim id est laborum.'
-    },
-}
-const daily = {
-    item01: {
-        src: '/images/products/cup.png',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor occaecat cia deserunt mollit anim id est laborum.'
-    },
-    item02: {
-        src: '/images/products/crystball.png',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor occaecat cia deserunt mollit anim id est laborum.'
-    },
-    item03: {
-        src: '/images/products/light.png',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor occaecat cia deserunt mollit anim id est laborum.'
-    },
-    item04: {
-        src: '/images/products/tape.png',
         description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor occaecat cia deserunt mollit anim id est laborum.'
     }
 }
+const daily = {
+    name: '唐图水杯',
+    route: 'products/cup',
+    src: '/images/products/cup.png',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor occaecat cia deserunt mollit anim id est laborum.'
+}
 const gift = {
-    item01: {
+    cup: {
+        name: '唐图水杯',
+        route: 'products/cup',
         src: '/images/products/cup.png',
         description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor occaecat cia deserunt mollit anim id est laborum.'
     },
-    item02: {
-        src: '/images/products/crystball.png',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor occaecat cia deserunt mollit anim id est laborum.'
-    },
-    item03: {
+    light: {
+        name: '唐图台灯',
+        route: 'products/light',
         src: '/images/products/light.png',
         description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor occaecat cia deserunt mollit anim id est laborum.'
     },
-    item04: {
+    tape: {
+        name: '唐图胶带',
+        route: 'products/tape',
         src: '/images/products/tape.png',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor occaecat cia deserunt mollit anim id est laborum.'
+    },
+    ball: {
+        name: '唐图水晶球',
+        route: 'products/ball',
+        src: '/images/products/ball.png',
         description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor occaecat cia deserunt mollit anim id est laborum.'
     }
 }
 
-//首页
 router.get('/', function(req, res, next) {
         res.render('index', {
             navbar: navbar,
@@ -92,17 +101,17 @@ router.get('/', function(req, res, next) {
 router.get('/products', function(req, res, next) {
         res.render('pages/products', {
             navbar: navbar,
+            daily: daily,
+            intel: intel,
             logo: true,
-            intel:intel,
-            daily:daily,
-            gift:gift
+            gift: gift
         })
     })
     // 服务页面
 router.get('/service', function(req, res, next) {
         res.render('pages/service', {
-            navbar: navbar,
             products: products,
+            navbar: navbar,
             logo: true
         })
     })
@@ -136,14 +145,68 @@ router.get('/contact', function(req, res, next) {
         })
     })
     // 产品个例
-    
+
+    const cup = {
+      name: '唐图水杯',
+      route: 'products/cup',
+      src: '/images/products/cup.png',
+      description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor occaecat cia deserunt mollit anim id est laborum.'
+    }
+    const light = {
+      name: '唐图台灯',
+      route: 'products/light',
+      src: '/images/products/light.png',
+      description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor occaecat cia deserunt mollit anim id est laborum.'
+    }
+    const tape = {
+      name: '唐图胶带',
+      route: 'products/tape',
+      src: '/images/products/tape.png',
+      description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor occaecat cia deserunt mollit anim id est laborum.'
+    }
+    const ball = {
+      name: '唐图水晶球',
+      route: 'products/ball',
+      src: '/images/products/ball.png',
+      description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor occaecat cia deserunt mollit anim id est laborum.'
+    }
+    //首页
 router.get('/products/:id', function(req, res, next) {
     let id = req.params.id
-    res.render('pages/product', {
-        navbar: navbar,
-        logo: true,
-        id:id
-    })
+    switch (id) {
+        case 'cup':
+            res.render('pages/product', {
+                navbar: navbar,
+                color:'#5b7e91',
+                logo: true,
+                cup: cup
+            })
+            break
+        case 'light':
+            res.render('pages/product', {
+                navbar: navbar,
+                color:"#474a4d",
+                light:light,
+                logo: true
+            })
+            break
+        case 'tape':
+            res.render('pages/product', {
+                navbar: navbar,
+                color:"#afafb0",
+                logo: true,
+                tape:tape
+            })
+            break
+        case 'ball':
+            res.render('pages/product', {
+                navbar: navbar,
+                color:"#fce2c4",
+                logo: true,
+                ball:ball
+            })
+            break
+    }
 })
 
 
