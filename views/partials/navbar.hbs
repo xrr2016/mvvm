@@ -13,7 +13,16 @@
     <li><i {{#if isIndex  }} style="color:#f4f4f4;" {{/if}} class="fa fa-search fa-lg" aria-hidden="true" class="md-only"></i></li>
     <li><a href="#" id="language" {{#if isIndex  }} style="color:#f4f4f4;" {{/if}} {{#if isAbout }} style='color:#f4f4f4' {{/if}}>CN <span class="caret"></span></a></li>
 </ul>
+{{#if isIndex }}
+    {{else}}
+    <ul id="phoneNav">
+        <li><a href="/">返回主页</a></li>
+    </ul>
+{{/if}}
 <style>
+    #phoneNav {
+        display: none;
+    }
     .logo {
         position: absolute;
         top: 2%;
@@ -56,9 +65,11 @@
     .navbar li:hover a {
         border: 2px solid orange;
     }
-    #navbar-active{
-      border: 2px solid orange;
+
+    #navbar-active {
+        border: 2px solid orange;
     }
+
     #language {
         border: 2px solid transparent;
     }
@@ -66,6 +77,25 @@
     @media (max-width:768px) {
         .navbar {
             display: none;
+        }
+        #phoneNav {
+            display: block;
+            position: absolute;
+            bottom: 5px;
+            right: 6%;
+            width: 100%;
+            margin: 0;
+            z-index: 100;
+        }
+        #phoneNav li {
+            font-size: 20px;
+            text-align: right;
+            margin: 10px auto;
+        }
+
+        #phoneNav li a {
+            color: rgba(0,0,0,0.8);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.5);
         }
     }
 </style>

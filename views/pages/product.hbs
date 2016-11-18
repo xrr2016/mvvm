@@ -83,7 +83,6 @@
         width: 100%;
         margin-top: 4%;
     }
-
     .product-left,
     .product-mid,
     .product-right {
@@ -111,7 +110,6 @@
         width: 60%;
         margin: 0;
         padding: 14% 2% 14% 10%;
-        padding-left: 10%;
     }
 
     .left-list-item {
@@ -203,7 +201,44 @@
 
     .img-list-item img {
         width: 70%;
-    }</style>
+    }
+    @media (max-width:768px) {
+      .logo{
+        display: none;
+      }
+      .product-container{
+        margin-top: 0;
+        height: 600px;
+      }
+      .product-left{
+        display: none;
+      }
+      .product-mid{
+        width: 40%;
+      }
+      .product-right{
+        width: 60%;
+      }
+      .des-title{
+        width: 400%;
+        font-size: 16px;
+        text-align: center;
+      }
+      .des-content{
+        padding-left: 2%;
+        width: 400%;
+        text-indent: 2em;
+        font-size: 12px;
+      }
+      .go-back{
+        font-size: 12px;
+      }
+      .left-list-item{
+        font-size: 10px;
+      }
+
+    }
+</style>
 <script type="text/javascript">
     var goBack = document.querySelector('.go-back')
     goBack.addEventListener('click',function(){
