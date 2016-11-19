@@ -32,25 +32,49 @@ const products = {
 }
 
 const intel = {
-    cup: {
+    item01: {
         name: '唐图水杯',
         route: 'products/cup',
         src: '/images/products/cup.png',
         description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor occaecat cia deserunt mollit anim id est laborum.'
     },
-    light: {
+    item02: {
         name: '唐图台灯',
         route: 'products/light',
         src: '/images/products/light.png',
         description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor occaecat cia deserunt mollit anim id est laborum.'
     },
-    tape: {
+    item03: {
         name: '唐图胶带',
         route: 'products/tape',
         src: '/images/products/tape.png',
         description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor occaecat cia deserunt mollit anim id est laborum.'
     },
-    ball: {
+    item04: {
+        name: '唐图水晶球',
+        route: 'products/ball',
+        src: '/images/products/ball.png',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor occaecat cia deserunt mollit anim id est laborum.'
+    },
+    item05: {
+        name: '唐图水杯',
+        route: 'products/cup',
+        src: '/images/products/cup.png',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor occaecat cia deserunt mollit anim id est laborum.'
+    },
+    item06: {
+        name: '唐图台灯',
+        route: 'products/light',
+        src: '/images/products/light.png',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor occaecat cia deserunt mollit anim id est laborum.'
+    },
+    item07: {
+        name: '唐图胶带',
+        route: 'products/tape',
+        src: '/images/products/tape.png',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor occaecat cia deserunt mollit anim id est laborum.'
+    },
+    item08: {
         name: '唐图水晶球',
         route: 'products/ball',
         src: '/images/products/ball.png',
@@ -208,6 +232,5 @@ router.get('/products/:id', function(req, res, next) {
             break
     }
 })
-
 
 module.exports = router

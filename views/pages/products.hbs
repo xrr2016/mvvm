@@ -33,92 +33,98 @@
         </ul>
     </div>
     <div class="list-viewport">
-        <i class="fa fa-chevron-left fa-5x go-left" aria-hidden="true" id="goLeft"></i>
-        <ul class="intel-list">
-            {{#each intel }}
-                <li class="intel-item">
-                    <div class="mask">
-                      <p>
-                        <a href="{{this.route}}">{{this.name}}</a>
-                        {{this.description}}
-                      </p>
-                    </div>
-                    <img src="{{this.src}}" alt="" />
-                </li>
-            {{/each}}
-        </ul>
-        <i class="fa fa-chevron-right fa-5x go-right" aria-hidden="true" id="goRight"></i>
-    </div>
-</div>
-<div class="container products-container clearfix">
-    <div class="list-viewport">
-        <i class="fa fa-chevron-left fa-5x go-left" aria-hidden="true" id="goLeft"></i>
-        <ul class="intel-list">
-            {{#each intel }}
-                <li class="intel-item">
-                    <div class="mask">
-                      <p>
-                        <a href="{{this.route}}">{{this.name}}</a>
-                        {{this.description}}
-                      </p>
-                    </div>
-                    <img src="{{this.src}}" alt="" />
-                </li>
-            {{/each}}
-        </ul>
-        <i class="fa fa-chevron-right fa-5x go-right" aria-hidden="true" id="goRight"></i>
-    </div>
-    <div class="products-tag">
-        <ul class="tag-list">
-            <li class="tag-item">智能产品系列</li>
-            <span class="divider">
-              <span class="divider-inner" ></span>
-            </span>
-            <li class="tag-item">日常产品系列</li>
-            <span class="divider">
-                <span class="divider-inner"></span>
-            </span>
-            <li class="tag-item">礼品系列</li>
-            <span class="divider">
-                  <span class="divider-inner" ></span>
-            </span>
-        </ul>
+        <div class="list-wrapper">
+          <ul class="intel-list" style="left:0px">
+              {{#each intel }}
+                  <li class="intel-item">
+                      <div class="mask">
+                        <p>
+                          <a href="{{this.route}}">{{this.name}}</a>
+                          {{this.description}}
+                        </p>
+                      </div>
+                      <img src="{{this.src}}" alt="" />
+                  </li>
+              {{/each}}
+          </ul>
       </div>
+    </div>
+    <i class="fa fa-chevron-left fa-5x go-left" aria-hidden="true" id="goLeft"></i>
+    <i class="fa fa-chevron-right fa-5x go-right" aria-hidden="true" id="goRight"></i>
 </div>
 <div class="container products-container clearfix">
     <div class="products-tag">
         <ul class="tag-list">
-            <li class="tag-item">智能产品系列</li>
+            <li class="tag-item ">智能产品系列</li>
             <span class="divider">
-              <span class="divider-inner" ></span>
+              <span class="divider-inner active" ></span>
             </span>
             <li class="tag-item">日常产品系列</li>
             <span class="divider">
-          <span class="divider-inner" ></span>
+          <span class="divider-inner" style="width:0px"></span>
             </span>
             <li class="tag-item">礼品系列</li>
             <span class="divider">
-              <span class="divider-inner"></span>
+          <span class="divider-inner" style="width:0px"></span>
             </span>
         </ul>
     </div>
     <div class="list-viewport">
-        <i class="fa fa-chevron-left fa-5x go-left" aria-hidden="true" id="goLeft"></i>
-        <ul class="intel-list">
-            {{#each intel }}
-                <li class="intel-item">
-                    <div class="mask">
-                      <p>
-                        <a href="{{this.route}}">{{this.name}}</a>
-                        {{this.description}}
-                      </p>
-                    </div>
-                    <img src="{{this.src}}" alt="" />
-                </li>
-            {{/each}}
-        </ul>
-        <i class="fa fa-chevron-right fa-5x go-right" aria-hidden="true" id="goRight"></i>
+        <div class="list-wrapper">
+          <ul class="intel-list" style="left:0px">
+              {{#each intel }}
+                  <li class="intel-item">
+                      <div class="mask">
+                        <p>
+                          <a href="{{this.route}}">{{this.name}}</a>
+                          {{this.description}}
+                        </p>
+                      </div>
+                      <img src="{{this.src}}" alt="" />
+                  </li>
+              {{/each}}
+          </ul>
+      </div>
     </div>
+    <i class="fa fa-chevron-left fa-5x go-left" aria-hidden="true" id="goLeft"></i>
+    <i class="fa fa-chevron-right fa-5x go-right" aria-hidden="true" id="goRight"></i>
+</div>
+<div class="container products-container clearfix">
+    <div class="products-tag">
+        <ul class="tag-list">
+            <li class="tag-item ">智能产品系列</li>
+            <span class="divider">
+              <span class="divider-inner active" ></span>
+            </span>
+            <li class="tag-item">日常产品系列</li>
+            <span class="divider">
+          <span class="divider-inner" style="width:0px"></span>
+            </span>
+            <li class="tag-item">礼品系列</li>
+            <span class="divider">
+          <span class="divider-inner" style="width:0px"></span>
+            </span>
+        </ul>
+    </div>
+    <div class="list-viewport">
+        <div class="list-wrapper">
+          <ul class="intel-list" style="left:0px">
+              {{#each intel }}
+                  <li class="intel-item">
+                      <div class="mask">
+                        <p>
+                          <a href="{{this.route}}">{{this.name}}</a>
+                          {{this.description}}
+                        </p>
+                      </div>
+                      <img src="{{this.src}}" alt="" />
+                  </li>
+              {{/each}}
+          </ul>
+      </div>
+    </div>
+    <i class="fa fa-chevron-left fa-5x go-left" aria-hidden="true" id="goLeft"></i>
+    <i class="fa fa-chevron-right fa-5x go-right" aria-hidden="true" id="goRight"></i>
 </div>
 <style media="screen">
     .fa {
@@ -155,16 +161,13 @@
     }
     /*产品*/
     .products-container {
-        display: flex;
         margin: 4% 0;
-        justify-content: space-between;
     }
     /*标签*/
     .products-tag {
         float: left;
         width: 10%;
-        height: 80%;
-        padding: 0;
+        padding: 2% 1%;
         font-weight: bold;
         background-color: #ddd;
     }
@@ -175,7 +178,6 @@
     }
     .tag-item {
         width: 100%;
-        height: 30%;
         font-size: 24px;
         text-align: center;
         cursor: pointer;
@@ -190,26 +192,59 @@
     .divider-inner {
         display: block;
         height: 100%;
-        background: blue;
+        background: #00a497;
+    }
+    .go-left,.go-right{
+      position: absolute;
+      display: block;
+      width: 4%;
+      height: 100%;
+      z-index: 100;
+      top: 0;
+      text-align: center;
+      line-height: 6.4;
+    }
+    .go-right {
+      width: 6%;
+      right: 0%;
+      background-color: #ddd;
+    }
+    .go-left {
+      left: 14%;
+    }
+    .go-left:hover{
+      color: #000;
+    }
+    .go-right:hover{
+      color: #000;
     }
     .list-viewport {
         position: relative;
-        width: 84%;
-        padding: 2% 4%;
+        float: right;
+        width: 86%;
+        padding: 2% 0% 2% 0%;
         background-color: #ddd;
-        overflow: hidden;
+    }
+    .list-wrapper{
+      width: 100%;
+      overflow: hidden;
     }
     .intel-list {
+        position: relative;
+        width: 3056px;
+        left: 0;
         padding: 0;
-        margin: 0;
-        padding-left: 3%;
+        margin-bottom: 0;
+        overflow: hidden;
     }
     .intel-item {
         position: relative;
-        display: inline-block;
-        width: 24%;
-        margin-right: -4px;
+        float: left;
     }
+    .intel-item img {
+      width: 382px;
+    }
+
     .intel-item .mask{
       display: none;
       text-align: center;
@@ -229,21 +264,8 @@
       font-size: 16px;
       padding: 2% 10%;
     }
-    .mask p:hover{
+    .mask:hover{
       opacity: 0.8;
-    }
-    .intel-item img {
-        width: 100%;
-    }
-    .go-right {
-        position: absolute;
-        top: 40%;
-        right: 2%;
-    }
-    .go-left {
-        position: absolute;
-        top: 40%;
-        left: 2%;
     }
     @media (max-width:768px) {
         .logo{
@@ -300,6 +322,24 @@
       },1)
     }
 
-    var innerH = window.innerHeight
-    console.log(innerH)
+    var goLeft = document.querySelectorAll('#goLeft'),
+        goRight = document.querySelectorAll('#goRight')
+
+    var listWrapper = document.querySelectorAll('.list-wrapper'),
+        intelList  = document.querySelectorAll('.intel-list')
+
+
+      for(var a = 0;a < goLeft.length;a++){
+        (function(i){
+          goLeft[i].addEventListener('click',function(){
+            var listLeft = parseInt(intelList[i].style.left.slice(0,-2))
+            var imgWidth = intelList[i].querySelector('li img').width
+            intelList[i].style.left = (listLeft - imgWidth) + 'px'
+          })
+        })(a)
+    }
+
+
+    // var innerH = window.innerHeight
+    // console.log(innerH)
 </script>
