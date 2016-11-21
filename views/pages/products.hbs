@@ -3,22 +3,22 @@
     <ul class="products-list">
         <li class="products-list-item">
             <img src="/images/products/intel.png" alt="智能产品" />
-            <a href="#">智能产品</a>
+            <a href="#tag-intel">智能产品</a>
+        </li>
+        <li class="products-list-item">
+          <img src="/images/products/daily.png" alt="日常用品" />
+          <a href="#tag-daily">日常用品</a>
         </li>
         <li class="products-list-item">
             <img src="/images/products/gift.png" alt="礼品系列" />
-            <a href="#">礼品系列</a>
-        </li>
-        <li class="products-list-item">
-            <img src="/images/products/daily.png" alt="日常用品" />
-            <a href="#">日常用品</a>
+            <a href="#tag-gift">礼品系列</a>
         </li>
     </ul>
 </div>
 <div class="container products-container intel-container clearfix">
-    <div class="products-tag intel-tag">
+    <div class="products-tag intel-tag" id="tag-intel">
         <ul class="tag-list">
-            <li class="tag-item ">智能产品系列</li>
+            <li class="tag-item"> 智能产品系列</li>
             <span class="divider">
               <span class="divider-inner active" ></span>
             </span>
@@ -53,7 +53,7 @@
     <i class="fa fa-chevron-right fa-5x go-right" aria-hidden="true" id="goRight"></i>
 </div>
 <div class="container products-container daily-container clearfix">
-    <div class="products-tag daily-tag">
+    <div class="products-tag daily-tag" id="tag-daily">
         <ul class="tag-list" >
             <li class="tag-item ">智能产品系列</li>
             <span class="divider">
@@ -91,14 +91,14 @@
 </div>
 <div class="container products-container gift-container clearfix">
     <div class="products-tag">
-        <ul class="tag-list gift-tag">
+        <ul class="tag-list gift-tag"  id="tag-gift">
             <li class="tag-item">智能产品系列</li>
             <span class="divider">
               <span class="divider-inner" style="width:0px" ></span>
             </span>
             <li class="tag-item">日常产品系列</li>
             <span class="divider">
-          <span class="divider-inner"  style="width:0px"></span>
+                <span class="divider-inner" style="width:0px"></span>
             </span>
             <li class="tag-item">礼品系列</li>
             <span class="divider">
@@ -376,7 +376,6 @@
               if(listLeft <= -imgWidth * 4 ){
                 clearInterval(timer)
               }else{
-                console.log(listLeft)
                 intelList[i].style.left = (listLeft + -step) + 'px'
               }
             },1)
@@ -394,7 +393,6 @@
             if(listLeft >= 0 ){
               clearInterval(timer)
             }else{
-              console.log(listLeft)
               intelList[i].style.left = (listLeft + step) + 'px'
             }
           },1)
@@ -404,10 +402,20 @@
       })(b)
   }
 
-
-
-
-
-    // var innerH = window.innerHeight
-    // console.log(innerH)
+  // var productsListItem  = document.querySelectorAll('.products-list-item')
+  // for(var e = 0;e<productsListItem.length;e++){
+  //   productsListItem[e].childNodes[2].addEventListener('click',function(e){
+  //     window.requestAnimationFrame(scrollDown)
+  //   })
+  // }
+  // function scrollDown(){
+  //   var long = 1000
+  //   var timer = setInterval(function(){
+  //     var scrollTop = document.body.scrollTop || document.documentElement.scrollTop
+  //     scrollTop--
+  //     if(scrollTop >= long){
+  //       clearInterval(timer)
+  //     }
+  //   },1)
+  // }
 </script>
