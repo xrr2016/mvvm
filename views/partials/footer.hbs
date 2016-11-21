@@ -3,24 +3,26 @@
   <footer class="footer clearfix site-footer">
     <div class="footer-left">
       <div class="footer-left-container">
-        <h4>需要什么帮助</h4>
+        <h4 data-en="Need help" data-zh="需要什么帮助">需要什么帮助</h4>
         <ul>
           <li>
-            <a href="/career">{{navbar.career}} &nbsp;<span class="glyphicon glyphicon-play"></span></a>
+            <a data-en="Career Dev" data-zh="职业发展" href="/career">{{navbar.career}} &nbsp;<span class="glyphicon glyphicon-play"></span></a>
           </li>
           <li>
-            <a href="/contact">{{navbar.contact}}&nbsp; <span class="glyphicon glyphicon-play"></span></a>
+            <a data-en="Contact Us" data-zh="联系我们" href="/contact">{{navbar.contact}}&nbsp; <span class="glyphicon glyphicon-play"></span></a>
           </li>
         </ul>
       </div>
     </div>
     <div class="footer-right">
       <img src="/images/qrcode.png" alt="" />
-      <h4>关注我们</h4>
+      <h4 data-en="Follow us" data-zh="关注我们">关注我们</h4>
     </div>
     <div class="visitors"></div>
     <p class="visitorsNum">访客统计</p>
-    <div class="block"></div>
+    <div class="block">
+      &copy; 2016 Tangram 粤ICP备16065435号-1
+    </div>
   </footer>
 </div>
 <style media="screen">
@@ -116,7 +118,10 @@
       bottom: 0;
       left: 10%;
       width: 80%;
-      height: 1em;
+      height: 10%;
+      line-height: 2;
+      text-align: center;
+      color: #f4f4f4;
       background-color: #000;
     }
     @media (max-width:768px) {
