@@ -15,8 +15,8 @@
         </li>
     </ul>
 </div>
-<div class="container products-container clearfix">
-    <div class="products-tag">
+<div class="container products-container intel-container clearfix">
+    <div class="products-tag intel-tag">
         <ul class="tag-list">
             <li class="tag-item ">智能产品系列</li>
             <span class="divider">
@@ -52,16 +52,16 @@
     <i class="fa fa-chevron-left fa-5x go-left" aria-hidden="true" id="goLeft"></i>
     <i class="fa fa-chevron-right fa-5x go-right" aria-hidden="true" id="goRight"></i>
 </div>
-<div class="container products-container clearfix">
-    <div class="products-tag">
-        <ul class="tag-list">
+<div class="container products-container daily-container clearfix">
+    <div class="products-tag daily-tag">
+        <ul class="tag-list" >
             <li class="tag-item ">智能产品系列</li>
             <span class="divider">
-              <span class="divider-inner active" ></span>
+              <span class="divider-inner" style="width:0px"></span>
             </span>
             <li class="tag-item">日常产品系列</li>
             <span class="divider">
-          <span class="divider-inner" style="width:0px"></span>
+          <span class="divider-inner active"></span>
             </span>
             <li class="tag-item">礼品系列</li>
             <span class="divider">
@@ -69,8 +69,8 @@
             </span>
         </ul>
     </div>
-    <div class="list-viewport">
-        <div class="list-wrapper">
+    <div class="list-viewport daily-viewport">
+        <div class="list-wrapper daily-wrapper">
           <ul class="intel-list" style="left:0px">
               {{#each intel }}
                   <li class="intel-item">
@@ -86,23 +86,23 @@
           </ul>
       </div>
     </div>
-    <i class="fa fa-chevron-left fa-5x go-left" aria-hidden="true" id="goLeft"></i>
-    <i class="fa fa-chevron-right fa-5x go-right" aria-hidden="true" id="goRight"></i>
+    <i class="fa fa-chevron-left fa-5x go-left daily-goLeft" aria-hidden="true" id="goLeft"></i>
+    <i class="fa fa-chevron-right fa-5x go-right daily-goRight" aria-hidden="true" id="goRight"></i>
 </div>
-<div class="container products-container clearfix">
+<div class="container products-container gift-container clearfix">
     <div class="products-tag">
-        <ul class="tag-list">
-            <li class="tag-item ">智能产品系列</li>
+        <ul class="tag-list gift-tag">
+            <li class="tag-item">智能产品系列</li>
             <span class="divider">
-              <span class="divider-inner active" ></span>
+              <span class="divider-inner" style="width:0px" ></span>
             </span>
             <li class="tag-item">日常产品系列</li>
             <span class="divider">
-          <span class="divider-inner" style="width:0px"></span>
+          <span class="divider-inner"  style="width:0px"></span>
             </span>
             <li class="tag-item">礼品系列</li>
             <span class="divider">
-          <span class="divider-inner" style="width:0px"></span>
+          <span class="divider-inner active"></span>
             </span>
         </ul>
     </div>
@@ -131,7 +131,7 @@
         color: rgba(0, 0, 0, 0.5);
     }
     .active{
-      width: 50%;
+      width: 100%;
     }
     .products-background {
         width: 100%;
@@ -166,15 +166,18 @@
     /*标签*/
     .products-tag {
         float: left;
-        width: 10%;
+        width: 12%;
         padding: 2% 1%;
         font-weight: bold;
         background-color: #ddd;
     }
+    .daily-tag{
+      float: right;
+    }
     .tag-list {
         width: 100%;
-        padding: 10% 2% 10% 0;
         margin: 0;
+        padding: 10% 2% 10% 0;
     }
     .tag-item {
         width: 100%;
@@ -212,6 +215,12 @@
     .go-left {
       left: 14%;
     }
+    .daily-goLeft{
+      left: 0%;
+    }
+    .daily-goRight{
+      right: 14%;
+    }
     .go-left:hover{
       color: #000;
     }
@@ -225,13 +234,16 @@
         padding: 2% 0% 2% 0%;
         background-color: #ddd;
     }
+    .daily-viewport{
+      float: left;
+    }
     .list-wrapper{
       width: 100%;
       overflow: hidden;
     }
     .intel-list {
         position: relative;
-        width: 3056px;
+        width: 3820px;
         left: 0;
         padding: 0;
         margin-bottom: 0;
@@ -244,7 +256,6 @@
     .intel-item img {
       width: 382px;
     }
-
     .intel-item .mask{
       display: none;
       text-align: center;
@@ -271,18 +282,39 @@
         .logo{
           display: none;
         }
-        #goRight,#goLeft{
-          font-size: 20px;
-        }
         .products-list-item a {
             font-size: 12px;
         }
         .products-tag{
           display: none;
         }
+        .daily-container{
+          display: none;
+        }
+        .gift-container{
+          display: none;
+        }
         .list-viewport{
           width: 100%;
           margin-top: 6%;
+        }
+        .intel-list{
+          width: 2400px;
+        }
+        .intel-item img{
+          width: 240px;
+        }
+        .go-left,.go-right{
+          font-size: 34px;
+          top: 10%;
+          height: 240px;
+          line-height: 240px;
+        }
+        .go-right{
+          background-color: transparent;
+        }
+        .go-left{
+          left: 0%;
         }
         .mask p{
           font-size: 10px;
@@ -292,13 +324,10 @@
         }
     }
 </style>
-
 <script type="text/javascript">
     var tagItem = Array.from(document.querySelectorAll('.tag-item'))
     var dividerInner = Array.from(document.querySelectorAll('.divider-inner'))
-    for(var l = 1;l<dividerInner.length;l++){
-      dividerInner[l].style.width = '0px'
-    }
+
     for (var i = 0; i < tagItem.length; i++) {
         (function(j){
           tagItem[j].addEventListener('click', function() {
@@ -312,7 +341,6 @@
           })
         })(i)
     }
-
     function wilder(ele,target){
       ele.style.width = String(target) + 'px'
       setTimeout(function(){
@@ -328,16 +356,56 @@
     var listWrapper = document.querySelectorAll('.list-wrapper'),
         intelList  = document.querySelectorAll('.intel-list')
 
+    var imgs = intelList[0].querySelectorAll('li img')
+    var imgsTotalWidth = 0
+    for(var c = 0;c < imgs.length;c++){
+      imgsTotalWidth += imgs[c].width
+    }
+    var imgWidth =  imgsTotalWidth / imgs.length
 
-      for(var a = 0;a < goLeft.length;a++){
+    for(var d =0;d<intelList.length;d++){
+      intelList[d].style.left = -imgWidth * 2 + 'px'
+    }
+
+    var step = imgWidth * 2 / 80
+    for(var a = 0;a < goLeft.length;a++){
         (function(i){
           goLeft[i].addEventListener('click',function(){
-            var listLeft = parseInt(intelList[i].style.left.slice(0,-2))
-            var imgWidth = intelList[i].querySelector('li img').width
-            intelList[i].style.left = (listLeft - imgWidth) + 'px'
+            var timer = setInterval(function(){
+              var listLeft = parseInt(intelList[i].style.left.slice(0,-2))
+              if(listLeft <= -imgWidth * 4 ){
+                clearInterval(timer)
+              }else{
+                console.log(listLeft)
+                intelList[i].style.left = (listLeft + -step) + 'px'
+              }
+            },1)
+            goRight[i].style.display = "block"
+            goLeft[i].style.display = "none"
           })
         })(a)
     }
+
+    for(var b = 0;b < goRight.length;b++){
+      (function(i){
+        goRight[i].addEventListener('click',function(){
+          var timer = setInterval(function(){
+            var listLeft = parseInt(intelList[i].style.left.slice(0,-2))
+            if(listLeft >= 0 ){
+              clearInterval(timer)
+            }else{
+              console.log(listLeft)
+              intelList[i].style.left = (listLeft + step) + 'px'
+            }
+          },1)
+          goRight[i].style.display = "none"
+          goLeft[i].style.display = "block"
+        })
+      })(b)
+  }
+
+
+
 
 
     // var innerH = window.innerHeight

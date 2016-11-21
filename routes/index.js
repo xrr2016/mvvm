@@ -33,15 +33,15 @@ const products = {
 
 const intel = {
     item01: {
-        name: '唐图水杯',
-        route: 'products/cup',
-        src: '/images/products/cup.png',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor occaecat cia deserunt mollit anim id est laborum.'
-    },
-    item02: {
         name: '唐图台灯',
         route: 'products/light',
         src: '/images/products/light.png',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor occaecat cia deserunt mollit anim id est laborum.'
+    },
+    item02: {
+        name: '唐图水杯',
+        route: 'products/cup',
+        src: '/images/products/cup.png',
         description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor occaecat cia deserunt mollit anim id est laborum.'
     },
     item03: {
