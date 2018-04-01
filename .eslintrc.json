@@ -1,0 +1,7 @@
+{
+  "extends": "standard",
+  "plugins": ["eslint-plugin-standard", "eslint-plugin-promise"],
+  "rules": {
+    "space-before-function-paren": "off"
+  }
+}

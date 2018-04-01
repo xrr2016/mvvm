@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>MVVM</title>
+</head>
+
+<body>
+
+  <div id="app">
+    <input type="text" v-model="hello">
+    <input type="text" v-model="child.world">
+    <p>{{helloWorld}}</p>
+    <p v-html="child.world"></p>
+    <button v-on:click="clickBtn">change model</button>
+  </div>
+
+  <script src="src/Observer.js"></script>
+  <script src="srcWatcher.js"></script>
+  <script src="src/Compiler.js"></script>
+  <script src="src/Mvvm.js"></script>
+
+  <script>
+    const vm = new Mvvm({
+      el: '#app',
+      data: {
+        hello: 'Hello ',
+        className: 'btn',
+        html: '<span style="color: #f00;">red</span>',
+        child: {
+          world: 'World!'
+        }
+      },
+      computed: {
+        helloWorld() {
+          return this.hello + this.child.world
+        }
+      },
+      methods: {
+        clickBtn(e) {
+          var randomStrArr = ['childOne', 'childTwo', 'childThree'];
+          this.child.world = randomStrArr[parseInt(Math.random() * 3)];
+        }
+      }
+    })
+    // vm.$watch('child.world', function () {
+    //   console.log(arguments)
+    // })
+  </script>
+
+</body>
+
+</html>
