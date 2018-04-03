@@ -8,7 +8,8 @@ const updater = {
   classUpdater(node, value, oldValue) {
     let className = node.className
     className = className.replace(oldValue, '').replace(/\s$/, '')
-    const space = className + space + value
+    const space = className && String(value) ? ' ' : ''
+    node.className = className + space + value
   },
   modelUpdater(node, value, oldValue) {
     node.value = typeof value === 'undefined' ? '' : value
@@ -19,11 +20,10 @@ const compileUtil = {
   text(node, vm, exp) {
     this.bind(node, vm, exp, 'text')
   },
-
   model(node, vm, exp) {
     this.bind(node, vm, exp, 'model')
     const self = this
-    const val = this._getVal(vm, exp)
+    let val = this._getVal(vm, exp)
     node.addEventListener('input', event => {
       const newVal = event.target.value
       if (val === newVal) {
@@ -38,8 +38,7 @@ const compileUtil = {
   },
   bind(node, vm, exp, dir) {
     const updateFn = updater[dir + 'Updater']
-    updateFn && updateFn(node, vm[exp])
-
+    updateFn && updateFn(node, this._getVMVal(vm, exp))
     new Watcher(vm, exp, function(value, oldValue) {
       updateFn && updateFn(node, value, oldValue)
     })
@@ -51,8 +50,8 @@ const compileUtil = {
       node.addEventListener(eventType, fn.bind(vm), false)
     }
   },
-  _getVal(vm, exp) {
-    const val = vm
+  _getVMVal(vm, exp) {
+    let val = vm
     exp = exp.split('.')
     exp.forEach(k => {
       val = val[k]
@@ -60,7 +59,7 @@ const compileUtil = {
     return val
   },
   _setVal(vm, exp, value) {
-    const val = vm
+    let val = vm
     exp = exp.split('.')
     exp.forEach((k, i) => {
       if (i < exp.length - 1) {
@@ -79,12 +78,9 @@ class Compiler {
       : document.querySelector(element)
     if (this.$element) {
       this.$fragment = this.node2Fragment(this.$element)
-      this.init()
+      this.compileElement(this.$fragment)
       this.$element.appendChild(this.$fragment)
     }
-  }
-  init() {
-    this.compileElement(this.$fragment)
   }
   compile(node) {
     const self = this
@@ -92,6 +88,7 @@ class Compiler {
 
     Array.from(attrs).forEach(attr => {
       const attrName = attr.name
+      console.log(attr)
       if (self.isDirective(attrName)) {
         const exp = attr.value
         const dir = attrName.substring(2)
@@ -144,11 +141,10 @@ class Compiler {
       }
     })
   }
-  isElementNode(element) {}
   node2Fragment(element) {
     let fragment = document.createDocumentFragment()
-    let child = element.firstChild
-    while (child) {
+    let child = null
+    while ((child = element.firstChild)) {
       fragment.appendChild(child)
     }
     return fragment
